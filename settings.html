@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Settings | Fanvora</title>
+
+<link rel="stylesheet" href="settings.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h1>
+<i class="fa-solid fa-user-gear"></i>
+Profile Settings
+</h1>
+
+<form id="settingsForm">
+
+<div class="avatar">
+
+<img id="profilePreview"
+src="assets/avatars/fan-avatar.png">
+
+</div>
+
+<label>Full Name</label>
+
+<input
+type="text"
+id="name"
+required>
+
+<label>Email</label>
+
+<input
+type="email"
+id="email"
+readonly>
+
+<label>Country</label>
+
+<input
+type="text"
+id="country">
+
+<label>Favourite Sport</label>
+
+<select id="sport">
+
+<option>Football</option>
+
+<option>Cricket</option>
+
+<option>Basketball</option>
+
+<option>Formula 1</option>
+
+</select>
+
+<label>Favourite Team</label>
+
+<input
+type="text"
+id="team">
+
+<label>Bio</label>
+
+<textarea
+id="bio"></textarea>
+
+<button type="submit">
+
+Save Changes
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<script type="module" src="settings.js"></script>
+
+</body>
+
+</html>

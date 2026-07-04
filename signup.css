@@ -1,0 +1,686 @@
+/* ==========================================
+   FANVORA SIGNUP PAGE
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#07101d;
+    color:#fff;
+    overflow-x:hidden;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+
+}
+
+/* Background */
+
+.background-glow{
+
+    position:fixed;
+    inset:0;
+    z-index:-2;
+
+    background:
+    radial-gradient(circle at top left,
+    rgba(255,106,0,.18),
+    transparent 40%),
+
+    radial-gradient(circle at bottom right,
+    rgba(255,106,0,.12),
+    transparent 35%),
+
+    #07101d;
+
+}
+
+.background-glow::before{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+
+    background-size:70px 70px;
+
+    opacity:.15;
+
+}
+
+/* ==========================================
+   SIGNUP SECTION
+========================================== */
+
+.signup-page{
+
+    width:100%;
+    padding:60px 20px;
+
+}
+
+.signup-box{
+
+    max-width:1220px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    background:#101a2b;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    box-shadow:0 25px 70px rgba(0,0,0,.45);
+
+}
+
+/* LEFT */
+
+.signup-left{
+
+    padding:60px;
+
+}
+
+.logo img{
+
+    width:170px;
+
+    margin-bottom:30px;
+
+}
+
+.signup-left h1{
+
+    font-size:44px;
+
+    font-weight:800;
+
+    margin-bottom:15px;
+
+    line-height:1.2;
+
+}
+
+.signup-left p{
+
+    color:#bfc7d4;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+/* ==========================================
+   INPUT FIELDS
+========================================== */
+
+.input-box{
+
+    width:100%;
+    height:60px;
+
+    display:flex;
+
+    align-items:center;
+
+    background:#162336;
+
+    border:1px solid #2d4566;
+
+    border-radius:16px;
+
+    padding:0 18px;
+
+    margin-bottom:22px;
+
+    transition:.35s;
+
+}
+
+.input-box:hover{
+
+    border-color:#ff6b00;
+
+}
+
+.input-box:focus-within{
+
+    border-color:#ff6b00;
+
+    box-shadow:0 0 20px rgba(255,106,0,.25);
+
+}
+
+.input-box i{
+
+    color:#ff6b00;
+
+    font-size:18px;
+
+}
+
+.input-box input{
+
+    flex:1;
+
+    margin-left:15px;
+
+    background:none;
+
+    border:none;
+
+    outline:none;
+
+    color:#fff;
+
+    font-size:16px;
+
+}
+
+.input-box input::placeholder{
+
+    color:#9aa8bb;
+
+}
+
+.togglePassword,
+.toggleConfirmPassword{
+
+    cursor:pointer;
+
+}
+
+/* ==========================================
+OPTIONS
+========================================== */
+
+.options{
+
+    margin:15px 0 30px;
+
+}
+
+.options label{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:10px;
+
+    color:#c5c5c5;
+
+    line-height:1.6;
+
+    font-size:15px;
+
+}
+
+.options input{
+
+    margin-top:4px;
+
+    accent-color:#ff6b00;
+
+}
+
+/* ==========================================
+SIGNUP BUTTON
+========================================== */
+
+.signup-btn{
+
+    width:100%;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#ff6b00;
+
+    color:#fff;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(255,106,0,.30);
+
+}
+
+.signup-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 20px 45px rgba(255,106,0,.45);
+
+}
+
+/* ==========================================
+DIVIDER
+========================================== */
+
+.divider{
+
+    margin:35px 0;
+
+    text-align:center;
+
+    position:relative;
+
+}
+
+.divider::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:50%;
+
+    width:100%;
+
+    height:1px;
+
+    background:#2a3b56;
+
+}
+
+.divider span{
+
+    position:relative;
+
+    z-index:2;
+
+    padding:0 20px;
+
+    background:#101a2b;
+
+    color:#a7b2c3;
+
+}
+
+/* ==========================================
+GOOGLE BUTTON
+========================================== */
+
+.google-btn{
+
+    width:100%;
+
+    height:58px;
+
+    background:#162336;
+
+    border:1px solid #2d4566;
+
+    border-radius:16px;
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.google-btn i{
+
+    color:#ff6b00;
+
+    margin-right:10px;
+
+}
+
+.google-btn:hover{
+
+    border-color:#ff6b00;
+
+    background:#1b2a40;
+
+}
+
+.login-link{
+
+    text-align:center;
+
+    margin-top:30px;
+
+    color:#bfc7d4;
+
+}
+
+.login-link a{
+
+    color:#ff6b00;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+}
+
+.login-link a:hover{
+
+    text-decoration:underline;
+
+}
+/* ==========================================
+   RIGHT SIDE
+========================================== */
+
+.signup-right{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:60px;
+
+    background:linear-gradient(
+    135deg,
+    #121f32,
+    #1b2d46);
+
+}
+
+.welcome-card{
+
+    max-width:420px;
+    text-align:center;
+
+}
+
+.welcome-card img{
+
+    width:100%;
+    max-width:340px;
+
+    margin:auto;
+    margin-bottom:30px;
+
+    border-radius:22px;
+
+    box-shadow:0 20px 55px rgba(255,106,0,.25);
+
+    transition:.4s;
+
+}
+
+.welcome-card img:hover{
+
+    transform:scale(1.05);
+
+}
+
+.welcome-card h2{
+
+    font-size:36px;
+
+    margin-bottom:18px;
+
+    font-weight:700;
+
+}
+
+.welcome-card p{
+
+    color:#bfc7d4;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+.features{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+.feature{
+
+    background:#162336;
+
+    border:1px solid #2d4566;
+
+    border-radius:16px;
+
+    padding:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    transition:.35s;
+
+}
+
+.feature i{
+
+    color:#ff6b00;
+
+    font-size:20px;
+
+}
+
+.feature span{
+
+    font-weight:600;
+
+}
+
+.feature:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#ff6b00;
+
+    box-shadow:0 15px 30px rgba(255,106,0,.25);
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:1000px){
+
+.signup-box{
+
+grid-template-columns:1fr;
+
+}
+
+.signup-right{
+
+display:none;
+
+}
+
+.signup-left{
+
+padding:50px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.signup-left{
+
+padding:35px;
+
+}
+
+.signup-left h1{
+
+font-size:36px;
+
+}
+
+.logo img{
+
+width:140px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.signup-page{
+
+padding:20px;
+
+}
+
+.signup-left{
+
+padding:25px;
+
+}
+
+.signup-left h1{
+
+font-size:30px;
+
+}
+
+.input-box{
+
+height:55px;
+
+}
+
+.signup-btn,
+.google-btn{
+
+height:55px;
+
+font-size:15px;
+
+}
+
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes fadeUp{
+
+0%{
+
+opacity:0;
+
+transform:translateY(35px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.signup-box{
+
+animation:fadeUp .8s ease;
+
+}
+
+.input-box,
+.signup-btn,
+.google-btn,
+.feature{
+
+transition:all .35s ease;
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#07101d;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#ff6b00;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#ff8c32;
+
+}
+
+::selection{
+
+background:#ff6b00;
+
+color:#fff;
+
+}

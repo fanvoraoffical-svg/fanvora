@@ -1,39 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fanvora Signup</title>
 
-    <link rel="stylesheet" href="style.css">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Create Account | Fanvora</title>
+
+<link rel="stylesheet" href="signup.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
 </head>
 
 <body>
 
-<div class="login-container">
+<div class="background-glow"></div>
 
-    <h1>Join FANVORA 🚀</h1>
-    <p>Create your Fan Identity</p>
+<section class="signup-page">
 
-    <form>
+<div class="signup-box">
 
-        <input type="text" placeholder="Full Name">
+<div class="signup-left">
 
-        <input type="email" placeholder="Email">
+<a href="index.html" class="logo">
 
-        <input type="password" placeholder="Password">
+<img src="assets/logo/logo.png" alt="Fanvora">
 
-        <input type="password" placeholder="Confirm Password">
+</a>
 
-        <button>Create Account</button>
+<h1>
 
-    </form>
+Create Your Fanvora Account
 
-    <a href="login.html">Already have an account? Login</a>
+</h1>
+
+<p>
+
+Join millions of sports fans and start collecting achievements today.
+
+</p>
+
+<form id="signupForm">
+
+<div class="input-box">
+
+<i class="fa-solid fa-user"></i>
+
+<input
+
+type="text"
+
+placeholder="Full Name"
+
+required>
 
 </div>
 
-<script src="script.js"></script>
+<div class="input-box">
+
+<i class="fa-solid fa-envelope"></i>
+
+<input
+
+type="email"
+
+placeholder="Email Address"
+
+required>
+
+</div>
+<div class="input-box">
+
+    <i class="fa-solid fa-lock"></i>
+    
+    <input
+    type="password"
+    id="password"
+    placeholder="Password"
+    required>
+    
+    <i
+    class="fa-solid fa-eye togglePassword"
+    id="togglePassword">
+    
+    </i>
+    
+    </div>
+    
+    <div class="input-box">
+    
+    <i class="fa-solid fa-lock"></i>
+    
+    <input
+    type="password"
+    id="confirmPassword"
+    placeholder="Confirm Password"
+    required>
+    
+    <i
+    class="fa-solid fa-eye toggleConfirmPassword"
+    id="toggleConfirmPassword">
+    
+    </i>
+    
+    </div>
+    
+    <div class="options">
+    
+    <label>
+    
+    <input type="checkbox" required>
+    
+    I agree to the Terms & Privacy Policy
+    
+    </label>
+    
+    </div>
+    
+    <button
+    type="submit"
+    class="signup-btn">
+    
+    Create Account
+    
+    </button>
+    
+    </form>
+    
+    <div class="divider">
+    
+    <span>OR</span>
+    
+    </div>
+    
+    <button class="google-btn">
+    
+    <i class="fa-brands fa-google"></i>
+    
+    Continue with Google
+    
+    </button>
+    
+    <p class="login-link">
+    
+    Already have an account?
+    
+    <a href="login.html">
+    
+    Login
+    
+    </a>
+    
+    </p>
+    
+    </div>
+    
+    <!-- RIGHT -->
+    
+    <div class="signup-right">
+    
+    <div class="welcome-card">
+    
+        <img src="assets/hero/hero-banner.png" alt="Fanvora Community">
+    
+    <h2>
+    
+    Become Part of Fanvora
+    
+    </h2>
+    
+    <p>
+    
+    Create your account, earn exclusive badges, build your Fan Passport and compete with fans around the world.
+    
+    </p>
+    
+    <div class="features">
+    
+    <div class="feature">
+    
+    <i class="fa-solid fa-trophy"></i>
+    
+    <span>Achievements</span>
+    
+    </div>
+    
+    <div class="feature">
+    
+    <i class="fa-solid fa-id-card"></i>
+    
+    <span>Passport</span>
+    
+    </div>
+    
+    <div class="feature">
+    
+    <i class="fa-solid fa-medal"></i>
+    
+    <span>Badges</span>
+    
+    </div>
+    
+    <div class="feature">
+    
+    <i class="fa-solid fa-ranking-star"></i>
+    
+    <span>Leaderboard</span>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </section>
+    <script type="module" src="signup.js"></script>
 
 </body>
 </html>

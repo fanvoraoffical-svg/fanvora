@@ -1,34 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fanvora Login</title>
 
-    <link rel="stylesheet" href="style.css">
+    <title>Login | Fanvora</title>
+
+    <link rel="stylesheet" href="login.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
 </head>
+
 <body>
 
-<div class="login-container">
+<div class="background-glow"></div>
 
-    <h1>FANVORA</h1>
-    <p>Welcome Back 👋</p>
+<section class="login-page">
 
-    <form>
+<div class="login-box">
 
-        <input type="email" placeholder="Email">
+<!-- LEFT -->
 
-        <input type="password" placeholder="Password">
+<div class="login-left">
 
-        <button>Login</button>
+<a href="index.html" class="logo">
 
-    </form>
+<img src="assets/logo/logo.png" alt="Fanvora Logo">
 
-    <a href="signup.html">Create New Account</a>
+</a>
+
+<h1>
+
+Welcome Back 👋
+
+</h1>
+
+<p>
+
+Login to continue your Fanvora journey and unlock exclusive sports rewards.
+
+</p>
+
+<form id="loginForm">
+
+<div class="input-box">
+
+<i class="fa-solid fa-envelope"></i>
+
+<input
+type="email"
+placeholder="Email Address"
+required>
 
 </div>
 
-<script src="script.js"></script>
+<div class="input-box">
 
+<i class="fa-solid fa-lock"></i>
+
+<input
+type="password"
+id="password"
+placeholder="Password"
+required>
+
+<i
+class="fa-solid fa-eye togglePassword"
+id="togglePassword">
+
+</i>
+
+</div>
+<div class="options">
+
+    <label>
+    
+    <input type="checkbox">
+    
+    Remember Me
+    
+    </label>
+    
+    <a href="#">
+    
+    Forgot Password?
+    
+    </a>
+    
+    </div>
+    
+    <button
+    type="submit"
+    class="login-btn">
+    
+    Login
+    
+    </button>
+    
+    </form>
+    
+    <div class="divider">
+    
+    <span>OR</span>
+    
+    </div>
+    
+    <button class="google-btn">
+    
+    <i class="fa-brands fa-google"></i>
+    
+    Continue with Google
+    
+    </button>
+    
+    <p class="signup-link">
+    
+    Don't have an account?
+    
+    <a href="signup.html">
+    
+    Create Account
+    
+    </a>
+    
+    </p>
+    
+    </div>
+    
+    <!-- RIGHT -->
+    
+    <div class="login-right">
+    
+    <div class="welcome-card">
+    
+    <img
+    src="assets/passport/passport.png"
+    alt="Fan Passport">
+    
+    <h2>
+    
+    One Identity.
+    
+    Every Sport.
+    
+    </h2>
+    
+    <p>
+    
+    Collect achievements, unlock premium badges and become a legendary sports fan with Fanvora.
+    
+    </p>
+    
+    <div class="features">
+    
+    <div class="feature">
+    
+    <i class="fa-solid fa-futbol"></i>
+    
+    <span>Football</span>
+    
+    </div>
+    
+    <div class="feature">
+    
+    <i class="fa-solid fa-baseball-bat-ball"></i>
+    
+    <span>Cricket</span>
+    
+    </div>
+    
+    <div class="feature">
+    
+    <i class="fa-solid fa-basketball"></i>
+    
+    <span>Basketball</span>
+    
+    </div>
+    
+    <div class="feature">
+    
+    <i class="fa-solid fa-flag-checkered"></i>
+    
+    <span>Formula 1</span>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </section>
 </body>
+
+<script type="module" src="login.js"></script>
+
 </html>

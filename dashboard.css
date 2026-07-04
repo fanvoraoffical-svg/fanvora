@@ -1,0 +1,983 @@
+/* ======================================================
+   FANVORA DASHBOARD V2
+   PART 1
+====================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --bg:#07111f;
+    --card:#101a2b;
+    --card2:#162438;
+
+    --orange:#ff6b00;
+    --orange2:#ff8c32;
+
+    --text:#ffffff;
+    --muted:#9fb2ca;
+
+    --border:#243650;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+}
+
+/* ===========================
+LAYOUT
+=========================== */
+
+.dashboard{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+/* ===========================
+SIDEBAR
+=========================== */
+
+.sidebar{
+
+    width:280px;
+
+    background:#0e1828;
+
+    border-right:1px solid var(--border);
+
+    padding:35px 22px;
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    bottom:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.logo{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+}
+
+.logo img{
+
+    width:175px;
+
+    transition:.4s;
+
+}
+
+.logo img:hover{
+
+    transform:scale(1.05);
+
+}
+
+.sidebar nav{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.sidebar nav a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:16px 18px;
+
+    border-radius:16px;
+
+    color:#d2dbea;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+    font-weight:500;
+
+}
+
+.sidebar nav a i{
+
+    font-size:20px;
+
+    width:24px;
+
+}
+
+.sidebar nav a:hover{
+
+    background:var(--card2);
+
+    color:var(--orange);
+
+}
+
+.sidebar nav a.active{
+
+    background:var(--orange);
+
+    color:#fff;
+
+    box-shadow:
+
+    0 15px 35px
+
+    rgba(255,107,0,.30);
+
+}
+
+/* ===========================
+MAIN
+=========================== */
+
+.main{
+
+    flex:1;
+
+    margin-left:280px;
+
+    padding:40px;
+
+}
+
+/* ===========================
+TOPBAR
+=========================== */
+
+.topbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+.topbar h1{
+
+    font-size:36px;
+
+    font-weight:700;
+
+}
+
+.topbar p{
+
+    color:var(--muted);
+
+    margin-top:8px;
+
+}
+
+.top-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.notify{
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:var(--card);
+
+    color:var(--orange);
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    font-size:18px;
+
+}
+
+.notify:hover{
+
+    background:var(--orange);
+
+    color:#fff;
+
+}
+
+#topAvatar{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid var(--orange);
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+#topAvatar:hover{
+
+    transform:scale(1.08);
+
+}
+
+/* ===========================
+COMMON CARD
+=========================== */
+
+.profile-card,
+.bio-card,
+.challenge,
+.stat{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    box-shadow:
+
+    0 18px 45px
+
+    rgba(0,0,0,.25);
+
+}
+/* ======================================================
+   PROFILE CARD
+====================================================== */
+
+.profile-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:35px;
+
+    padding:35px;
+
+    margin-bottom:30px;
+
+}
+
+.profile-left{
+
+    flex-shrink:0;
+
+}
+
+#profileImage{
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:5px solid var(--orange);
+
+    box-shadow:0 20px 45px rgba(255,107,0,.30);
+
+    transition:.4s;
+
+}
+
+#profileImage:hover{
+
+    transform:scale(1.05);
+
+}
+
+.profile-right{
+
+    flex:1;
+
+}
+
+.profile-right h2{
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+}
+
+.profile-right p{
+
+    color:var(--muted);
+
+}
+
+.profile-grid{
+
+    margin-top:30px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+
+}
+
+.profile-grid div{
+
+    background:var(--card2);
+
+    border:1px solid var(--border);
+
+    padding:18px;
+
+    border-radius:18px;
+
+    transition:.35s;
+
+}
+
+.profile-grid div:hover{
+
+    border-color:var(--orange);
+
+    transform:translateY(-4px);
+
+}
+
+.profile-grid strong{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:var(--orange);
+
+    font-size:14px;
+
+}
+
+.profile-grid p{
+
+    color:#fff;
+
+    font-size:16px;
+
+}
+
+/* ======================================================
+   STATS
+====================================================== */
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+    margin-bottom:30px;
+
+}
+
+.stat{
+
+    text-align:center;
+
+    padding:30px;
+
+    transition:.35s;
+
+}
+
+.stat:hover{
+
+    transform:translateY(-6px);
+
+    border-color:var(--orange);
+
+}
+
+.stat i{
+
+    font-size:34px;
+
+    color:var(--orange);
+
+    margin-bottom:18px;
+
+}
+
+.stat h2{
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+}
+
+.stat p{
+
+    color:var(--muted);
+
+}
+
+/* ======================================================
+   BIO CARD
+====================================================== */
+
+.bio-card{
+
+    padding:30px;
+
+    margin-bottom:30px;
+
+}
+
+.bio-card h2{
+
+    margin-bottom:15px;
+
+    font-size:28px;
+
+}
+
+.bio-card p{
+
+    color:var(--muted);
+
+    line-height:1.8;
+
+}
+
+/* ======================================================
+   DAILY CHALLENGE
+====================================================== */
+
+.challenge{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:30px;
+
+    padding:35px;
+
+    background:linear-gradient(
+        135deg,
+        #ff6b00,
+        #ff8c32
+    );
+
+    border:none;
+
+}
+
+.challenge h2{
+
+    margin-bottom:10px;
+
+    font-size:30px;
+
+}
+
+.challenge p{
+
+    color:#fff;
+
+    line-height:1.8;
+
+}
+
+.challenge button{
+
+    padding:16px 34px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#fff;
+
+    color:#ff6b00;
+
+    font-weight:700;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.challenge button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.25);
+
+}
+
+/* ======================================================
+   SMOOTH HOVER
+====================================================== */
+
+.profile-card,
+.bio-card,
+.challenge,
+.stat{
+
+    transition:.35s;
+
+}
+
+.profile-card:hover,
+.bio-card:hover{
+
+    transform:translateY(-4px);
+
+}
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media (max-width:1200px){
+
+    .stats{
+    
+    grid-template-columns:repeat(2,1fr);
+    
+    }
+    
+    .profile-card{
+    
+    flex-direction:column;
+    
+    text-align:center;
+    
+    }
+    
+    .profile-grid{
+    
+    grid-template-columns:1fr;
+    
+    }
+    
+    }
+    
+    @media (max-width:992px){
+    
+    .sidebar{
+    
+    width:90px;
+    
+    padding:25px 15px;
+    
+    }
+    
+    .sidebar .logo img{
+    
+    width:55px;
+    
+    }
+    
+    .sidebar nav a span{
+    
+    display:none;
+    
+    }
+    
+    .sidebar nav a{
+    
+    justify-content:center;
+    
+    padding:18px;
+    
+    }
+    
+    .main{
+    
+    margin-left:90px;
+    
+    padding:30px;
+    
+    }
+    
+    }
+    
+    @media (max-width:768px){
+    
+    .topbar{
+    
+    flex-direction:column;
+    
+    align-items:flex-start;
+    
+    gap:20px;
+    
+    }
+    
+    .top-actions{
+    
+    width:100%;
+    
+    justify-content:space-between;
+    
+    }
+    
+    .stats{
+    
+    grid-template-columns:1fr;
+    
+    }
+    
+    .challenge{
+    
+    flex-direction:column;
+    
+    align-items:flex-start;
+    
+    }
+    
+    .challenge button{
+    
+    width:100%;
+    
+    }
+    
+    #profileImage{
+    
+    width:150px;
+    
+    height:150px;
+    
+    }
+    
+    .profile-right h2{
+    
+    font-size:28px;
+    
+    }
+    
+    }
+    
+    @media (max-width:600px){
+    
+    .sidebar{
+    
+    display:none;
+    
+    }
+    
+    .main{
+    
+    margin-left:0;
+    
+    padding:20px;
+    
+    }
+    
+    .topbar h1{
+    
+    font-size:28px;
+    
+    }
+    
+    .profile-card{
+    
+    padding:25px;
+    
+    }
+    
+    .bio-card{
+    
+    padding:25px;
+    
+    }
+    
+    .challenge{
+    
+    padding:25px;
+    
+    }
+    
+    .profile-grid{
+    
+    gap:15px;
+    
+    }
+    
+    }
+    
+    /* ======================================================
+       ANIMATIONS
+    ====================================================== */
+    
+    @keyframes fadeUp{
+    
+    0%{
+    
+    opacity:0;
+    
+    transform:translateY(30px);
+    
+    }
+    
+    100%{
+    
+    opacity:1;
+    
+    transform:translateY(0);
+    
+    }
+    
+    }
+    
+    .profile-card{
+    
+    animation:fadeUp .6s ease;
+    
+    }
+    
+    .stats{
+    
+    animation:fadeUp .8s ease;
+    
+    }
+    
+    .bio-card{
+    
+    animation:fadeUp 1s ease;
+    
+    }
+    
+    .challenge{
+    
+    animation:fadeUp 1.2s ease;
+    
+    }
+    
+    .stat{
+    
+    transition:all .35s ease;
+    
+    }
+    
+    .stat:hover{
+    
+    box-shadow:0 20px 40px rgba(255,107,0,.18);
+    
+    }
+    
+    .notify,
+    .challenge button,
+    .sidebar nav a{
+    
+    transition:all .3s ease;
+    
+    }
+    
+    /* ======================================================
+       BACKGROUND EFFECT
+    ====================================================== */
+    
+    body::before{
+    
+    content:"";
+    
+    position:fixed;
+    
+    top:-250px;
+    
+    left:-250px;
+    
+    width:600px;
+    
+    height:600px;
+    
+    background:radial-gradient(circle,
+    rgba(255,107,0,.15),
+    transparent 70%);
+    
+    z-index:-2;
+    
+    }
+    
+    body::after{
+    
+    content:"";
+    
+    position:fixed;
+    
+    bottom:-250px;
+    
+    right:-250px;
+    
+    width:600px;
+    
+    height:600px;
+    
+    background:radial-gradient(circle,
+    rgba(255,140,50,.12),
+    transparent 70%);
+    
+    z-index:-2;
+    
+    }
+    
+    /* ======================================================
+       SCROLLBAR
+    ====================================================== */
+    
+    ::-webkit-scrollbar{
+    
+    width:10px;
+    
+    }
+    
+    ::-webkit-scrollbar-track{
+    
+    background:#07111f;
+    
+    }
+    
+    ::-webkit-scrollbar-thumb{
+    
+    background:linear-gradient(
+    180deg,
+    var(--orange),
+    var(--orange2)
+    );
+    
+    border-radius:30px;
+    
+    }
+    
+    ::-webkit-scrollbar-thumb:hover{
+    
+    background:var(--orange2);
+    
+    }
+    
+    /* ======================================================
+       TEXT SELECTION
+    ====================================================== */
+    
+    ::selection{
+    
+    background:var(--orange);
+    
+    color:#fff;
+    
+    }
+    
+    /* ======================================================
+       FINAL PREMIUM TOUCH
+    ====================================================== */
+    
+    .profile-card:hover,
+    .bio-card:hover,
+    .challenge:hover{
+    
+    box-shadow:
+    
+    0 30px 70px rgba(0,0,0,.35);
+    
+    }
+    
+    .profile-grid div{
+    
+    cursor:default;
+    
+    }
+    
+    .profile-grid div p{
+    
+    font-weight:600;
+    
+    }
+    
+    .challenge strong{
+    
+    color:#fff;
+    
+    }
+    
+    .stat h2{
+    
+    font-weight:700;
+    
+    }
+    
+    .stat i{
+    
+    transition:.35s;
+    
+    }
+    
+    .stat:hover i{
+    
+    transform:scale(1.15);
+    
+    }
+    
+    .logo img{
+    
+    filter:drop-shadow(0 10px 20px rgba(255,107,0,.20));
+    
+    }
