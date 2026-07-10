@@ -1,118 +1,108 @@
 import { auth, db } from "./firebase.js";
 
-import {
-  onAuthStateChanged,
-  signOut
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
-import {
-  doc,
-  getDoc,
-  updateDoc,
-  increment
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import { doc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-// ========================================
+import { dailyLoginReward, getLevelProgress } from "./gameEngine.js";
+
+// ===============================
 // Elements
-// ========================================
-
-const welcomeText = document.getElementById("welcomeText");
+// ===============================
 
 const userName = document.getElementById("userName");
-
 const userEmail = document.getElementById("userEmail");
 
-const passportId = document.getElementById("passportId");
+const userNation = document.getElementById("supportNation");
 
-const country = document.getElementById("country");
+const xpText = document.getElementById("userXP");
+const levelText = document.getElementById("userLevel");
 
-const sport = document.getElementById("sport");
+const progressBar = document.getElementById("xpProgress");
 
-const team = document.getElementById("team");
+const badgeContainer = document.getElementById("badgeContainer");
 
-const level = document.getElementById("level");
+const memberSince = document.getElementById("memberSince");
 
-const xp = document.getElementById("xp");
+// ===============================
+// AUTH
+// ===============================
 
-const xpCard = document.getElementById("xpCard");
+onAuthStateChanged(auth, async(user)=>{
 
-const levelCard = document.getElementById("levelCard");
+    if(!user){
 
-const bio = document.getElementById("bio");
-
-const claimBtn = document.getElementById("claimBtn");
-
-const logoutBtn = document.getElementById("logoutBtn");
-
-// ========================================
-// Authentication
-// ========================================
-
-onAuthStateChanged(auth, async (user) => {
-
-    if (!user) {
-
-        window.location.href = "login.html";
+        window.location.href="login.html";
 
         return;
 
     }
 
-    loadUser(user.uid);
+    await loadDashboard(user.uid);
 
 });
 
-// ========================================
-// Load User
-// ========================================
+// ===============================
+// LOAD DASHBOARD
+// ===============================
 
-async function loadUser(uid){
+async function loadDashboard(uid){
 
     try{
 
-        const ref = doc(db,"users",uid);
-
-        const snap = await getDoc(ref);
+        const snap = await getDoc(doc(db,"users",uid));
 
         if(!snap.exists()) return;
 
         const data = snap.data();
 
-        welcomeText.innerHTML =
-        `Welcome Back, ${data.name} 👋`;
-
         userName.textContent =
-        data.name || "";
+        data.name || "Fan";
 
         userEmail.textContent =
         data.email || "";
 
-        passportId.textContent =
-        data.passportId || "";
+        userNation.textContent =
+        "🌍 Fan " + (data.supportCountry || "India");
 
-        country.textContent =
-        data.country || "Not Added";
+        xpText.textContent =
+        (data.xp || 0) + " XP";
 
-        sport.textContent =
-        data.favoriteSport || "Football";
+        levelText.textContent =
+        "Level " + (data.level || 1);
 
-        team.textContent =
-        data.favoriteTeam || "Not Added";
+        // Progress Bar
 
-        level.textContent =
-        data.level || 1;
+        const progress =
+        getLevelProgress(data.xp || 0);
 
-        levelCard.textContent =
-        data.level || 1;
+        progressBar.style.width =
+        progress + "%";
 
-        xp.textContent =
-        `${data.xp || 0} XP`;
+        // Member Since
 
-        xpCard.textContent =
-        data.xp || 0;
+        if(data.joinedAt){
 
-        bio.textContent =
-        data.bio || "No bio added yet.";
+            const joined =
+            data.joinedAt.toDate();
+
+            memberSince.textContent =
+            joined.toLocaleDateString();
+
+        }
+
+        // Daily Reward
+
+        const reward =
+        await dailyLoginReward();
+
+        if(reward){
+
+            alert("🎉 Daily Login Reward +20 XP");
+
+        }
+
+        loadBadges(data.badges || []);
 
     }
 
@@ -123,97 +113,142 @@ async function loadUser(uid){
     }
 
 }
+// ===============================
+// LOAD BADGES
+// ===============================
 
-// ========================================
-// Daily Challenge
-// ========================================
+function loadBadges(badges){
 
-if(claimBtn){
+    badgeContainer.innerHTML = "";
 
-claimBtn.addEventListener("click",async()=>{
+    if(badges.length===0){
 
-const user=auth.currentUser;
+        badgeContainer.innerHTML = `
+        <div class="badge">
+            🏅 No Badge Yet
+        </div>
+        `;
 
-if(!user) return;
+        return;
 
-try{
+    }
 
-await updateDoc(
+    badges.forEach(badge=>{
 
-doc(db,"users",user.uid),
+        badgeContainer.innerHTML += `
 
-{
+        <div class="badge">
 
-xp:increment(50)
+            🏅 ${badge}
 
-}
+        </div>
 
-);
+        `;
 
-alert("🎉 +50 XP Added!");
-
-loadUser(user.uid);
-
-}
-
-catch(error){
-
-alert(error.message);
+    });
 
 }
 
-});
+// ===============================
+// LIVE CLOCK
+// ===============================
+
+const liveClock =
+document.getElementById("liveClock");
+
+function updateClock(){
+
+    if(!liveClock) return;
+
+    const now = new Date();
+
+    liveClock.textContent =
+    now.toLocaleTimeString();
 
 }
 
-// ========================================
-// Notification
-// ========================================
+setInterval(updateClock,1000);
 
-const notify=document.querySelector(".notify");
+updateClock();
 
-if(notify){
+// ===============================
+// QUICK ACTIONS
+// ===============================
 
-notify.addEventListener("click",()=>{
+const passportBtn =
+document.getElementById("passportBtn");
 
-alert("🔔 No new notifications.");
+const leaderboardBtn =
+document.getElementById("leaderboardBtn");
 
-});
+const settingsBtn =
+document.getElementById("settingsBtn");
+
+if(passportBtn){
+
+passportBtn.onclick=()=>{
+
+window.location.href="passport.html";
+
+};
 
 }
 
-// ========================================
-// Logout
-// ========================================
+if(leaderboardBtn){
+
+leaderboardBtn.onclick=()=>{
+
+window.location.href="leaderboard.html";
+
+};
+
+}
+
+if(settingsBtn){
+
+settingsBtn.onclick=()=>{
+
+window.location.href="settings.html";
+
+};
+
+}
+
+// ===============================
+// LOGOUT
+// ===============================
+
+const logoutBtn =
+document.getElementById("logoutBtn");
 
 if(logoutBtn){
 
-logoutBtn.addEventListener("click",async()=>{
+logoutBtn.onclick = async()=>{
 
-const ok=confirm("Logout from Fanvora?");
-
-if(!ok) return;
-
-try{
-
-await signOut(auth);
+await auth.signOut();
 
 window.location.href="login.html";
 
-}
-
-catch(error){
-
-alert(error.message);
+};
 
 }
 
-});
+// ===============================
+// AUTO REFRESH
+// ===============================
+
+setInterval(()=>{
+
+if(auth.currentUser){
+
+loadDashboard(auth.currentUser.uid);
 
 }
 
-// ========================================
-// Console
-// ========================================
+},30000);
 
-console.log("🔥 Fanvora Dashboard V2 Ready");
+// ===============================
+// DASHBOARD READY
+// ===============================
+
+console.log("🚀 Fanvora Dashboard V3 Ready");

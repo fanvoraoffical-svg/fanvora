@@ -25,19 +25,23 @@
 
 <div class="dashboard">
 
-<!-- SIDEBAR -->
+<!-- ===========================
+SIDEBAR
+=========================== -->
 
 <aside class="sidebar">
 
 <div class="logo">
 
-<img src="assets/logo/logo.png">
+<img src="assets/logo/logo.png" alt="Fanvora">
+
+<h2>Fanvora</h2>
 
 </div>
 
 <nav>
 
-<a href="#" class="active">
+<a href="dashboard.html" class="active">
 
 <i class="fa-solid fa-house"></i>
 
@@ -45,7 +49,7 @@
 
 </a>
 
-<a href="#">
+<a href="passport.html">
 
 <i class="fa-solid fa-id-card"></i>
 
@@ -53,15 +57,7 @@
 
 </a>
 
-<a href="#">
-
-<i class="fa-solid fa-medal"></i>
-
-<span>Badges</span>
-
-</a>
-
-<a href="#">
+<a href="leaderboard.html">
 
 <i class="fa-solid fa-ranking-star"></i>
 
@@ -89,63 +85,29 @@
 
 </aside>
 
-<!-- MAIN -->
+<!-- ===========================
+MAIN CONTENT
+=========================== -->
 
-<div class="main">
+<main class="main">
 
-<header class="topbar">
+<!-- Top Bar -->
+
+<div class="topbar">
 
 <div>
 
-<h1 id="welcomeText">
+<h1>
 
-Welcome Back 👋
+Welcome,
 
-</h1>
-
-<p>
-
-Your Fanvora Profile
-
-</p>
-
-</div>
-
-<div class="top-actions">
-
-<button class="notify">
-
-<i class="fa-solid fa-bell"></i>
-
-</button>
-
-<img
-src="assets/avatars/fan-avatar.png"
-id="topAvatar">
-
-</div>
-
-</header>
-
-<!-- PROFILE CARD -->
-
-<section class="profile-card">
-
-<div class="profile-left">
-
-<img
-src="assets/avatars/fan-avatar.png"
-id="profileImage">
-
-</div>
-
-<div class="profile-right">
-
-<h2 id="userName">
+<span id="userName">
 
 Loading...
 
-</h2>
+</span>
+
+</h1>
 
 <p id="userEmail">
 
@@ -153,202 +115,331 @@ Loading...
 
 </p>
 
-<div class="profile-grid">
-
-<div>
-
-<strong>Passport ID</strong>
-
-<p id="passportId">
-
-Loading...
-
-</p>
-
 </div>
 
-<div>
+<div class="clock">
 
-<strong>Country</strong>
+<i class="fa-solid fa-clock"></i>
 
-<p id="country">
+<span id="liveClock">
 
-Loading...
+00:00:00
 
-</p>
-
-</div>
-
-<div>
-
-<strong>Favourite Sport</strong>
-
-<p id="sport">
-
-Loading...
-
-</p>
-
-</div>
-
-<div>
-
-<strong>Favourite Team</strong>
-
-<p id="team">
-
-Loading...
-
-</p>
-
-</div>
-
-<div>
-
-<strong>Level</strong>
-
-<p id="level">
-
-1
-
-</p>
-
-</div>
-
-<div>
-
-<strong>XP</strong>
-
-<p id="xp">
-
-0 XP
-
-</p>
+</span>
 
 </div>
 
 </div>
 
-</div>
+<!-- Hero Card -->
 
-</section>
-
-<!-- STATS -->
-
-<section class="stats">
-
-<div class="stat">
-
-<i class="fa-solid fa-fire"></i>
-
-<h2 id="xpCard">
-
-0
-
-</h2>
-
-<p>Total XP</p>
-
-</div>
-
-<div class="stat">
-
-<i class="fa-solid fa-star"></i>
-
-<h2 id="levelCard">
-
-1
-
-</h2>
-
-<p>Level</p>
-
-</div>
-
-<div class="stat">
-
-<i class="fa-solid fa-medal"></i>
-
-<h2>
-
-0
-
-</h2>
-
-<p>Badges</p>
-
-</div>
-
-<div class="stat">
-
-<i class="fa-solid fa-users"></i>
-
-<h2>
-
-1
-
-</h2>
-
-<p>Followers</p>
-
-</div>
-
-</section>
-
-<!-- BIO -->
-
-<section class="bio-card">
-
-<h2>
-
-About Me
-
-</h2>
-
-<p id="bio">
-
-No bio yet.
-
-</p>
-
-</section>
-
-<!-- DAILY CHALLENGE -->
-
-<section class="challenge">
+<section class="hero-card">
 
 <div>
 
 <h2>
 
-🔥 Daily Challenge
+🌍
+
+<span id="supportNation">
+
+Fan India
+
+</span>
 
 </h2>
 
 <p>
 
-Watch one football match today and earn
-
-<strong>50 XP</strong>
+Support your nation.
+Build your legacy.
 
 </p>
 
 </div>
 
-<button id="claimBtn">
+<div class="hero-level">
 
-Claim Reward
+<h2 id="userLevel">
 
-</button>
+Level 1
+
+</h2>
+
+</div>
 
 </section>
 
-</div>
+<!-- Stats -->
+
+<section class="stats-grid">
+
+<div class="stat-card">
+
+<h3>⭐ XP</h3>
+
+<h2 id="userXP">
+
+0 XP
+
+</h2>
+
+<div class="progress">
+
+<div id="xpProgress"></div>
 
 </div>
 
-<script type="module" src="dashboard.js"></script>
+</div>
 
-</body>
+<div class="stat-card">
 
-</html>
+<h3>👥 Total Fans</h3>
+
+<h2 id="liveTotalFans">
+
+0
+
+</h2>
+
+</div>
+
+<div class="stat-card">
+
+<h3>🟢 Online</h3>
+
+<h2 id="liveOnlineFans">
+
+0
+
+</h2>
+
+</div>
+
+<div class="stat-card">
+
+<h3>📅 Joined</h3>
+
+<h2 id="memberSince">
+
+--
+
+</h2>
+
+</div>
+
+</section>
+<!-- ===========================
+BADGES + QUICK ACTIONS
+=========================== -->
+
+<section class="dashboard-grid">
+
+    <!-- Badges -->
+    
+    <div class="card">
+    
+    <div class="card-header">
+    
+    <h2>
+    
+    🏅 My Badges
+    
+    </h2>
+    
+    </div>
+    
+    <div id="badgeContainer" class="badge-grid">
+    
+    <div class="badge">
+    
+    No Badges Yet
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    <!-- Quick Actions -->
+    
+    <div class="card">
+    
+    <div class="card-header">
+    
+    <h2>
+    
+    ⚡ Quick Actions
+    
+    </h2>
+    
+    </div>
+    
+    <div class="quick-actions">
+    
+    <button id="passportBtn">
+    
+    <i class="fa-solid fa-id-card"></i>
+    
+    Passport
+    
+    </button>
+    
+    <button id="leaderboardBtn">
+    
+    <i class="fa-solid fa-ranking-star"></i>
+    
+    Leaderboard
+    
+    </button>
+    
+    <button id="settingsBtn">
+    
+    <i class="fa-solid fa-gear"></i>
+    
+    Settings
+    
+    </button>
+    
+    </div>
+    
+    </div>
+    
+    </section>
+    
+    <!-- ===========================
+    RANK + LIVE STATS
+    =========================== -->
+    
+    <section class="dashboard-grid">
+    
+    <div class="card">
+    
+    <div class="card-header">
+    
+    <h2>
+    
+    🏆 My Rank
+    
+    </h2>
+    
+    </div>
+    
+    <div class="rank-box">
+    
+    <h1 id="myRank">
+    
+    #--
+    
+    </h1>
+    
+    <p>
+    
+    Keep earning XP to climb the leaderboard.
+    
+    </p>
+    
+    </div>
+    
+    </div>
+    
+    <div class="card">
+    
+    <div class="card-header">
+    
+    <h2>
+    
+    🌍 Fanvora Live
+    
+    </h2>
+    
+    </div>
+    
+    <div class="live-stats">
+    
+    <div>
+    
+    <span>Today's Fans</span>
+    
+    <h3 id="todayFans">
+    
+    0
+    
+    </h3>
+    
+    </div>
+    
+    <div>
+    
+    <span>Top Nation</span>
+    
+    <h3 id="topNation">
+    
+    --
+    
+    </h3>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </section>
+    
+    <!-- ===========================
+    LIVE ACTIVITY
+    =========================== -->
+    
+    <section class="card">
+    
+    <div class="card-header">
+    
+    <h2>
+    
+    🔥 Live Fan Activity
+    
+    </h2>
+    
+    </div>
+    
+    <div id="activityFeed">
+    
+    <div class="activity-item">
+    
+    🟢 Waiting for activity...
+    
+    </div>
+    
+    </div>
+    
+    </section>
+    <!-- ===========================
+FOOTER
+=========================== -->
+
+<footer class="dashboard-footer">
+
+    <p>
+    
+    © 2026 Fanvora • Support Your Nation. Build Your Legacy.
+    
+    </p>
+    
+    </footer>
+    
+    </main>
+    
+    </div>
+    
+    <!-- ===========================
+    SCRIPTS
+    =========================== -->
+    
+    <script type="module" src="dashboard.js"></script>
+    
+    <script type="module" src="liveCounter.js"></script>
+    
+    </body>
+    
+    </html>

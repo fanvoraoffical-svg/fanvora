@@ -123,7 +123,7 @@ photoURL: "assets/avatars/fan-avatar.png",
 
         alert("🎉 Account Created Successfully!");
 
-        window.location.href = "dashboard.html";
+        window.location.href = "choose-country.html";
 
     }
 

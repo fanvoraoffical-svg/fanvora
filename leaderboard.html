@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Leaderboard | Fanvora</title>
+
+<link rel="stylesheet" href="leaderboard.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="leaderboard-page">
+
+<header>
+
+<a href="dashboard.html" class="backBtn">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Dashboard
+
+</a>
+
+<h1>
+
+🏆 Fanvora Leaderboard
+
+</h1>
+
+</header>
+
+<!-- TOP STATS -->
+
+<div class="stats">
+
+<div class="stat">
+
+<i class="fa-solid fa-users"></i>
+
+<h2 id="totalFans">
+
+0
+
+</h2>
+
+<p>Total Fans</p>
+
+</div>
+
+<div class="stat">
+
+<i class="fa-solid fa-earth-asia"></i>
+
+<h2>
+
+10
+
+</h2>
+
+<p>Fan Nations</p>
+
+</div>
+
+<div class="stat">
+
+<i class="fa-solid fa-bolt"></i>
+
+<h2 id="totalXP">
+
+0
+
+</h2>
+
+<p>Total XP</p>
+
+</div>
+
+<div class="stat">
+
+<i class="fa-solid fa-signal"></i>
+
+<h2 id="onlineUsers">
+
+0
+
+</h2>
+
+<p>Online Now</p>
+
+</div>
+
+</div>
+
+<!-- TABS -->
+
+<div class="tabs">
+
+<button class="tab active" id="fansTab">
+
+🏆 Top Fans
+
+</button>
+
+<button class="tab" id="nationTab">
+
+🌍 Top Fan Nations
+
+</button>
+
+</div>
+
+<!-- TOP FANS -->
+
+<div id="fansSection">
+
+<div class="table-header">
+
+<span>Rank</span>
+
+<span>Fan</span>
+
+<span>Nation</span>
+
+<span>Level</span>
+
+<span>XP</span>
+
+</div>
+
+<div id="leaderboardList">
+
+<!-- Firebase Data -->
+
+</div>
+
+</div>
+<!-- ==========================================
+TOP FAN NATIONS
+========================================== -->
+
+<div id="nationSection" class="hidden">
+
+    <div class="nation-header">
+    
+    <span>Rank</span>
+    
+    <span>Nation</span>
+    
+    <span>Supporters</span>
+    
+    </div>
+    
+    <div id="nationLeaderboard">
+    
+    <div class="nation-row">
+    
+    <span>🥇</span>
+    
+    <span>🇮🇳 Fan India</span>
+    
+    <span id="indiaFans">0 Fans</span>
+    
+    </div>
+    
+    <div class="nation-row">
+    
+    <span>🥈</span>
+    
+    <span>🇧🇷 Fan Brazil</span>
+    
+    <span id="brazilFans">0 Fans</span>
+    
+    </div>
+    
+    <div class="nation-row">
+    
+    <span>🥉</span>
+    
+    <span>🇦🇷 Fan Argentina</span>
+    
+    <span id="argentinaFans">0 Fans</span>
+    
+    </div>
+    
+    <div class="nation-row">
+    
+    <span>4</span>
+    
+    <span>🇫🇷 Fan France</span>
+    
+    <span id="franceFans">0 Fans</span>
+    
+    </div>
+    
+    <div class="nation-row">
+    
+    <span>5</span>
+    
+    <span>🇩🇪 Fan Germany</span>
+    
+    <span id="germanyFans">0 Fans</span>
+    
+    </div>
+    
+    <div class="nation-row">
+    
+    <span>6</span>
+    
+    <span>🇵🇹 Fan Portugal</span>
+    
+    <span id="portugalFans">0 Fans</span>
+    
+    </div>
+    
+    <div class="nation-row">
+    
+    <span>7</span>
+    
+    <span>🇪🇸 Fan Spain</span>
+    
+    <span id="spainFans">0 Fans</span>
+    
+    </div>
+    
+    <div class="nation-row">
+    
+    <span>8</span>
+    
+    <span>🏴 Fan England</span>
+    
+    <span id="englandFans">0 Fans</span>
+    
+    </div>
+    
+    <div class="nation-row">
+    
+    <span>9</span>
+    
+    <span>🇳🇱 Fan Netherlands</span>
+    
+    <span id="netherlandsFans">0 Fans</span>
+    
+    </div>
+    
+    <div class="nation-row">
+    
+    <span>10</span>
+    
+    <span>🇯🇵 Fan Japan</span>
+    
+    <span id="japanFans">0 Fans</span>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    <!-- ==========================================
+    YOUR RANK
+    ========================================== -->
+    
+    <div class="my-rank">
+    
+    <h2>
+    
+    🏅 Your Ranking
+    
+    </h2>
+    
+    <div class="rank-card">
+    
+    <h1 id="myRank">
+    
+    #--
+    
+    </h1>
+    
+    <p>
+    
+    Keep earning XP to climb the leaderboard.
+    
+    </p>
+    
+    </div>
+    
+    </div>
+    
+    <!-- ==========================================
+    LIVE ACTIVITY
+    ========================================== -->
+    
+    <div class="activity">
+    
+    <h2>
+    
+    🔥 Live Fan Activity
+    
+    </h2>
+    
+    <div id="activityFeed">
+    
+    <div class="activity-item">
+    
+    🟢 Waiting for live activity...
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    <script type="module" src="leaderboard.js"></script>
+    
+    </body>
+    
+    </html>
