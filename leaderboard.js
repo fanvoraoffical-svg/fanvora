@@ -13,6 +13,15 @@ limit,
 onSnapshot
 
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import { db } from "./firebase.js";
+
+import {
+collection,
+query,
+orderBy,
+limit,
+getDocs
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 // =========================================
 // ELEMENTS
@@ -412,3 +421,107 @@ setInterval(updateActivity,10000);
 // =========================================
 
 console.log("🏆 Fanvora Leaderboard Ready");
+// ===============================
+// FILTER BUTTONS
+// ===============================
+
+document.querySelectorAll(".filter-btn").forEach(btn=>{
+
+    btn.addEventListener("click",()=>{
+    
+    document.querySelectorAll(".filter-btn")
+    .forEach(b=>b.classList.remove("active"));
+    
+    btn.classList.add("active");
+    
+    });
+    
+    });
+    // ===============================
+// REAL LEADERBOARD
+// ===============================
+
+async function loadLeaderboard(){
+
+    const rankingTable =
+    document.getElementById("rankingTable");
+
+    if(!rankingTable) return;
+
+    rankingTable.innerHTML="";
+
+    try{
+
+        const q = query(
+            collection(db,"users"),
+            orderBy("xp","desc"),
+            limit(100)
+        );
+
+        const snap = await getDocs(q);
+
+        let rank = 1;
+
+        snap.forEach(doc=>{
+
+            const user = doc.data();
+
+            rankingTable.innerHTML += `
+
+            <div class="ranking-row">
+
+                <span>#${rank}</span>
+
+                <span>${user.name || "Fan"}</span>
+
+                <span>🌍 ${user.country || "-"}</span>
+
+                <span>${user.level || 1}</span>
+
+                <span>${user.xp || 0} XP</span>
+
+            </div>
+
+            `;
+
+            rank++;
+
+        });
+
+    }
+
+    catch(error){
+
+        console.error(error);
+
+    }
+
+}
+
+loadLeaderboard();
+// ===============================
+// SEARCH
+// ===============================
+
+const searchInput =
+document.getElementById("searchPlayer");
+
+searchInput?.addEventListener("keyup",()=>{
+
+const value =
+searchInput.value.toLowerCase();
+
+document
+.querySelectorAll(".ranking-row")
+.forEach(row=>{
+
+row.style.display =
+row.innerText
+.toLowerCase()
+.includes(value)
+? "grid"
+: "none";
+
+});
+
+});

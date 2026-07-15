@@ -118,6 +118,23 @@ Loading...
 </div>
 
 <div class="clock">
+    <div class="topbar-actions">
+
+        <button id="notificationBtn" class="icon-btn">
+    
+            🔔
+    
+            <span class="notify-dot"></span>
+    
+        </button>
+    
+        <button id="profileBtn" class="icon-btn">
+    
+            👤
+    
+        </button>
+    
+    </div>
 
 <i class="fa-solid fa-clock"></i>
 
@@ -169,7 +186,517 @@ Level 1
 </div>
 
 </section>
+<!-- ===========================
+TODAY'S MISSION
+=========================== -->
 
+<section class="card mission-card">
+
+    <div class="card-header">
+
+        <h2>🎯 Today's Mission</h2>
+
+    </div>
+
+    <div class="mission-content">
+
+        <div class="mission-icon">
+            🏆
+        </div>
+
+        <div class="mission-details">
+
+            <h3 id="missionTitle">
+                Support Your Nation
+            </h3>
+
+            <p id="missionDescription">
+                Choose your favourite nation and earn +20 XP today.
+            </p>
+
+            <div class="mission-progress">
+
+                <div id="missionProgress"></div>
+
+            </div>
+
+            <span id="missionStatus">
+                0% Complete
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ===========================
+DAILY STREAK
+=========================== -->
+
+<section class="card streak-card">
+
+    <div class="card-header">
+
+        <h2>🔥 Daily Streak</h2>
+
+    </div>
+
+    <div class="streak-content">
+
+        <div class="streak-circle">
+
+            <span id="streakCount">1</span>
+
+        </div>
+
+        <div class="streak-details">
+
+            <h3>Keep Your Streak Alive!</h3>
+
+            <p>
+
+                Login every day to earn bonus XP and unlock exclusive badges.
+
+            </p>
+
+            <div class="streak-reward">
+
+                🎁 Next Reward: <strong>+50 XP</strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ===========================
+WEEKLY XP
+=========================== -->
+
+<section class="card analytics-card">
+
+    <div class="card-header">
+
+        <h2>📊 Weekly XP Progress</h2>
+
+    </div>
+
+    <div class="analytics-content">
+
+        <div class="chart">
+
+            <div class="bar" style="height:35%">
+                <span>Mon</span>
+            </div>
+
+            <div class="bar" style="height:55%">
+                <span>Tue</span>
+            </div>
+
+            <div class="bar" style="height:80%">
+                <span>Wed</span>
+            </div>
+
+            <div class="bar" style="height:45%">
+                <span>Thu</span>
+            </div>
+
+            <div class="bar" style="height:65%">
+                <span>Fri</span>
+            </div>
+
+            <div class="bar" style="height:90%">
+                <span>Sat</span>
+            </div>
+
+            <div class="bar" style="height:70%">
+                <span>Sun</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ===========================
+LEADERBOARD PREVIEW
+=========================== -->
+
+<section class="card leaderboard-preview">
+
+    <div class="card-header">
+
+        <h2>🏆 Top Fans</h2>
+
+    </div>
+
+    <div class="leaderboard-list">
+
+        <div class="leader-item">
+
+            <span class="rank gold">🥇</span>
+
+            <div class="leader-info">
+
+                <h3>Ajay Sharma</h3>
+
+                <p>1250 XP</p>
+
+            </div>
+
+        </div>
+
+        <div class="leader-item">
+
+            <span class="rank silver">🥈</span>
+
+            <div class="leader-info">
+
+                <h3>Rahul</h3>
+
+                <p>980 XP</p>
+
+            </div>
+
+        </div>
+
+        <div class="leader-item">
+
+            <span class="rank bronze">🥉</span>
+
+            <div class="leader-info">
+
+                <h3>Neha</h3>
+
+                <p>910 XP</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="leaderboard-footer">
+
+        <a href="leaderboard.html" class="view-all-btn">
+
+            View Full Leaderboard →
+
+        </a>
+
+    </div>
+
+</section>
+<!-- ===========================
+NOTIFICATION CENTER
+=========================== -->
+
+<section class="card notification-card">
+
+    <div class="card-header">
+
+        <h2>🔔 Notification Center</h2>
+
+    </div>
+
+    <div class="notification-list">
+
+        <div class="notification-item">
+
+            <div class="notification-icon">
+                🎁
+            </div>
+
+            <div class="notification-content">
+
+                <h3>Daily Reward Available</h3>
+
+                <p>Login today and claim your +20 XP reward.</p>
+
+            </div>
+
+        </div>
+
+        <div class="notification-item">
+
+            <div class="notification-icon">
+                🏅
+            </div>
+
+            <div class="notification-content">
+
+                <h3>Unlock New Badge</h3>
+
+                <p>Earn 500 XP to unlock the Football Legend badge.</p>
+
+            </div>
+
+        </div>
+
+        <div class="notification-item">
+
+            <div class="notification-icon">
+                ⚽
+            </div>
+
+            <div class="notification-content">
+
+                <h3>Upcoming Match</h3>
+
+                <p>India vs Australia starts in 3 hours.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ===========================
+LIVE SPORTS CENTER
+=========================== -->
+
+<section class="card sports-center">
+
+    <div class="card-header">
+
+        <h2>⚽ Live Sports Center</h2>
+
+    </div>
+
+    <div class="sports-grid">
+
+        <div class="sport-live-card">
+
+            <div class="sport-icon">⚽</div>
+
+            <h3>Football</h3>
+
+            <p>Live Matches</p>
+
+            <span class="live-status">Coming Soon</span>
+
+        </div>
+
+        <div class="sport-live-card">
+
+            <div class="sport-icon">🏏</div>
+
+            <h3>Cricket</h3>
+
+            <p>Upcoming Matches</p>
+
+            <span class="live-status">Coming Soon</span>
+
+        </div>
+
+        <div class="sport-live-card">
+
+            <div class="sport-icon">🏀</div>
+
+            <h3>Basketball</h3>
+
+            <p>League Updates</p>
+
+            <span class="live-status">Coming Soon</span>
+
+        </div>
+
+        <div class="sport-live-card">
+
+            <div class="sport-icon">🏎️</div>
+
+            <h3>Formula 1</h3>
+
+            <p>Race Schedule</p>
+
+            <span class="live-status">Coming Soon</span>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ===========================
+ACHIEVEMENTS & XP TIMELINE
+=========================== -->
+
+<section class="card timeline-card">
+
+    <div class="card-header">
+
+        <h2>🏅 Achievements & XP Timeline</h2>
+
+    </div>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <h3>🎯 Account Created</h3>
+
+                <p>Your Fanvora journey has started.</p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <h3>⭐ +20 XP Earned</h3>
+
+                <p>Daily login reward claimed.</p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <h3>🏅 First Badge</h3>
+
+                <p>Unlock your first achievement.</p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <h3>🚀 Next Goal</h3>
+
+                <p>Reach 500 XP to unlock Football Legend.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ===========================
+TODAY'S CHALLENGES
+=========================== -->
+
+<section class="card challenge-card">
+
+    <div class="card-header">
+    
+    <h2>🎯 Today's Challenges</h2>
+    
+    </div>
+    
+    <div class="challenge-list">
+    
+    <label class="challenge-item">
+    
+    <input type="checkbox" id="c1">
+    
+    <span>Login Today (+20 XP)</span>
+    
+    </label>
+    
+    <label class="challenge-item">
+    
+    <input type="checkbox" id="c2">
+    
+    <span>Visit Passport (+15 XP)</span>
+    
+    </label>
+    
+    <label class="challenge-item">
+    
+    <input type="checkbox" id="c3">
+    
+    <span>Open Leaderboard (+10 XP)</span>
+    
+    </label>
+    
+    <label class="challenge-item">
+    
+    <input type="checkbox" id="c4">
+    
+    <span>Support Your Nation (+30 XP)</span>
+    
+    </label>
+    
+    </div>
+    
+    <div class="challenge-progress">
+    
+    <div id="challengeFill"></div>
+    
+    </div>
+    
+    <p id="challengeText">
+    
+    0 / 4 Completed
+    
+    </p>
+    
+    </section>
+    <!-- ===========================
+QUICK SHORTCUTS
+=========================== -->
+
+<section class="card shortcuts-card">
+
+    <div class="card-header">
+
+        <h2>⚡ Quick Shortcuts</h2>
+
+    </div>
+
+    <div class="shortcut-grid">
+
+        <button class="shortcut-btn" id="openPassport">
+
+            🎫
+            <span>Passport</span>
+
+        </button>
+
+        <button class="shortcut-btn" id="openBadges">
+
+            🏅
+            <span>Badges</span>
+
+        </button>
+
+        <button class="shortcut-btn" id="openLeaderboard">
+
+            🏆
+            <span>Leaderboard</span>
+
+        </button>
+
+        <button class="shortcut-btn" id="openSettings">
+
+            ⚙️
+            <span>Settings</span>
+
+        </button>
+
+    </div>
+
+</section>
 <!-- Stats -->
 
 <section class="stats-grid">
@@ -306,7 +833,49 @@ BADGES + QUICK ACTIONS
     </div>
     
     </section>
-    
+    <!-- ===========================
+DIGITAL PASSPORT
+=========================== -->
+
+<section class="card">
+
+    <div class="card-header">
+
+        <h2>🎫 My Digital Passport</h2>
+
+    </div>
+
+    <div class="passport-card">
+
+        <div class="passport-info">
+
+            <h3 id="passportName">Loading...</h3>
+
+            <p id="passportNation">🌍 India</p>
+
+            <p id="passportId">ID : FV000001</p>
+
+            <p id="passportLevel">⭐ Level 1</p>
+
+        </div>
+
+        <div id="qrcode"></div>
+
+    </div>
+
+    <div class="passport-actions">
+
+        <button id="downloadPassport">
+
+            <i class="fa-solid fa-download"></i>
+
+            Download PDF
+
+        </button>
+
+    </div>
+
+</section>
     <!-- ===========================
     RANK + LIVE STATS
     =========================== -->
@@ -435,7 +1004,7 @@ FOOTER
     <!-- ===========================
     SCRIPTS
     =========================== -->
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script type="module" src="dashboard.js"></script>
     
     <script type="module" src="liveCounter.js"></script>

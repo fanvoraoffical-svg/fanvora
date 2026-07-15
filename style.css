@@ -1,950 +1,315 @@
-/* ===========================
-   FANVORA V1 - FINAL CSS
-=========================== */
+/* ==========================================
+   FANVORA V1.1
+   GLOBAL
+========================================== */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-}
-
-html{
     scroll-behavior:smooth;
-}
-
-body{
+    }
+    
+    :root{
+    
+    --primary:#ff6b00;
+    --secondary:#0b1220;
+    --bg:#050b16;
+    --card:#111827;
+    --white:#ffffff;
+    --gray:#b8c1cc;
+    --border:rgba(255,255,255,.08);
+    
+    }
+    
+    body{
+    
     font-family:'Inter',sans-serif;
-    background:#07111f;
-    color:#fff;
+    background:var(--bg);
+    color:var(--white);
     overflow-x:hidden;
-}
-
-img{
+    line-height:1.7;
+    
+    }
+    
+    img{
+    
     max-width:100%;
     display:block;
-}
-
-a{
+    
+    }
+    
+    a{
+    
     text-decoration:none;
-}
-
-ul{
-    list-style:none;
-}
-
-.container{
-    width:90%;
-    max-width:1280px;
-    margin:auto;
-}
-
-/* ===========================
-   NAVBAR
-=========================== */
-
-.navbar{
-
-    position:fixed;
-
-    top:0;
-    left:0;
-
-    width:100%;
-
-    z-index:1000;
-
-    background:rgba(8,15,28,.88);
-
-    backdrop-filter:blur(18px);
-
-    border-bottom:1px solid rgba(255,255,255,.05);
-
-}
-
-.nav-container{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    height:90px;
-
-}
-
-.logo img{
-
-    height:60px;
-
-    width:auto;
-
-}
-
-.nav-links{
-
-    display:flex;
-
-    gap:40px;
-
-}
-
-.nav-links a{
-
-    color:white;
-
-    font-weight:600;
-
-    transition:.3s;
-
-}
-
-.nav-links a:hover{
-
-    color:#ff6b00;
-
-}
-
-.btn-login{
-
-    background:#ff6b00;
-
-    color:white;
-
-    padding:14px 28px;
-
-    border-radius:14px;
-
-    font-weight:700;
-
-    transition:.35s;
-
-}
-
-.btn-login:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:0 12px 30px rgba(255,106,0,.35);
-
-}
-
-/* ===========================
-   HERO
-=========================== */
-
-.hero{
-
-    min-height:100vh;
-
-    display:flex;
-
-    align-items:center;
-
-    padding-top:120px;
-
-    background:
-
-    radial-gradient(circle at center,
-    rgba(255,106,0,.12),
-    transparent 45%),
-
-    #07111f;
-
-}
-
-.hero-content{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:70px;
-
-    align-items:center;
-
-}
-
-.hero h1{
-
-    font-size:78px;
-
-    line-height:1.05;
-
-    font-weight:800;
-
-    margin-bottom:25px;
-
-}
-
-.hero p{
-
-    max-width:560px;
-
-    color:#c7c7c7;
-
-    line-height:1.9;
-
-    font-size:20px;
-
-}
-
-.hero-buttons{
-
-    display:flex;
-
-    gap:20px;
-
-    margin-top:40px;
-
-}
-
-.primary-btn{
-
-    background:#ff6b00;
-
-    color:white;
-
-    padding:18px 38px;
-
-    border-radius:15px;
-
-    font-weight:700;
-
-    transition:.35s;
-
-    box-shadow:0 15px 40px rgba(255,106,0,.28);
-
-}
-
-.primary-btn:hover{
-
-    transform:translateY(-5px);
-
-    box-shadow:0 20px 55px rgba(255,106,0,.45);
-
-}
-
-.secondary-btn{
-
-    border:2px solid #ff6b00;
-
-    color:#ff6b00;
-
-    padding:18px 38px;
-
-    border-radius:15px;
-
-    transition:.35s;
-
-    font-weight:700;
-
-}
-
-.secondary-btn:hover{
-
-    background:#ff6b00;
-
-    color:white;
-
-    box-shadow:0 0 25px rgba(255,106,0,.45);
-
-}
-
-.hero-right{
-
-    text-align:center;
-
-}
-
-.hero-right img{
-
-    width:100%;
-
-    max-width:650px;
-
-    border-radius:22px;
-
-    transition:.45s;
-
-    box-shadow:0 30px 70px rgba(255,106,0,.18);
-
-}
-
-.hero-right img:hover{
-
-    transform:scale(1.03);
-
-}
-
-.hero-stats{
-
-    display:flex;
-
-    gap:70px;
-
-    margin-top:60px;
-
-}
-
-.hero-stats h2{
-
-    color:#ff6b00;
-
-    font-size:46px;
-
-    font-weight:800;
-
-}
-
-.hero-stats span{
-
-    color:#c1c1c1;
-
-    font-size:18px;
-
-}
-/* ===========================
-   SECTION TITLE
-=========================== */
-
-.section-title{
-
-    text-align:center;
-
-    font-size:48px;
-
-    font-weight:800;
-
-    margin-bottom:70px;
-
-}
-
-/* ===========================
-   SPORTS
-=========================== */
-
-.sports{
-
-    padding:130px 0;
-
-}
-
-.sports-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:30px;
-
-}
-
-.sport-card{
-
-    background:#101a2b;
-
-    border:1px solid #22324b;
-
-    border-radius:24px;
-
-    padding:25px;
-
-    text-align:center;
-
-    overflow:hidden;
-
-    transition:.4s;
-
-}
-
-.sport-card:hover{
-
-    transform:translateY(-10px);
-
-    border-color:#ff6b00;
-
-    box-shadow:0 25px 60px rgba(255,106,0,.25);
-
-}
-
-.sport-card img{
-
-    width:100%;
-
-    border-radius:18px;
-
-    margin-bottom:22px;
-
-    transition:.5s;
-
-}
-
-.sport-card:hover img{
-
-    transform:scale(1.08);
-
-}
-
-.sport-card h3{
-
-    font-size:26px;
-
-    margin-bottom:15px;
-
-}
-
-.sport-card p{
-
-    color:#bfbfbf;
-
-    line-height:1.8;
-
-}
-
-/* ===========================
-   PASSPORT
-=========================== */
-
-.passport{
-
-    padding:130px 0;
-
-}
-
-.passport-wrapper{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:80px;
-
-    align-items:center;
-
-}
-
-.passport-image{
-
-    text-align:center;
-
-}
-
-.passport-image img{
-
-    width:100%;
-
-    max-width:520px;
-
-    border-radius:24px;
-
-    box-shadow:0 25px 70px rgba(0,0,0,.45);
-
-    transition:.4s;
-
-}
-
-.passport-image img:hover{
-
-    transform:scale(1.03);
-
-}
-
-.passport-content h3{
-
-    font-size:46px;
-
-    margin-bottom:25px;
-
-}
-
-.passport-content p{
-
-    color:#c8c8c8;
-
-    line-height:1.9;
-
-    margin-bottom:35px;
-
-    font-size:18px;
-
-}
-
-/* ===========================
-   BADGES
-=========================== */
-
-.badges{
-
-    padding:130px 0;
-
-}
-
-.badge-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:30px;
-
-}
-
-.badge-card{
-
-    background:#101a2b;
-
-    border:1px solid #22324b;
-
-    border-radius:24px;
-
-    padding:30px;
-
-    text-align:center;
-
-    transition:.4s;
-
-}
-
-.badge-card:hover{
-
-    transform:translateY(-10px);
-
-    border-color:#ff6b00;
-
-    box-shadow:0 25px 60px rgba(255,106,0,.25);
-
-}
-
-.badge-card img{
-
-    width:120px;
-
-    margin:auto;
-
-    margin-bottom:22px;
-
-    transition:.45s;
-
-}
-
-.badge-card:hover img{
-
-    transform:scale(1.12) rotate(6deg);
-
-}
-
-.badge-card h3{
-
-    font-size:22px;
-
-}
-
-/* ===========================
-   COMMUNITY
-=========================== */
-
-.community{
-
-    padding:130px 0;
-
-}
-
-.community-box{
-
-    background:#101a2b;
-
-    border-radius:28px;
-
-    padding:70px;
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:70px;
-
-    align-items:center;
-
-}
-
-.community-box h2{
-
-    font-size:48px;
-
-    margin-bottom:20px;
-
-}
-
-.community-box p{
-
-    color:#c7c7c7;
-
-    line-height:1.9;
-
-}
-
-.community-box img{
-
-    width:100%;
-
-    max-width:430px;
-
-    margin:auto;
-
-    border-radius:22px;
-
-    transition:.45s;
-
-}
-
-.community-box img:hover{
-
-    transform:scale(1.05);
-
-}
-
-/* ===========================
-   FOOTER
-=========================== */
-
-footer{
-
-    padding:80px 0;
-
-    border-top:1px solid #22324b;
-
-    text-align:center;
-
-}
-
-.footer-logo{
-
-    width:180px;
-
-    margin:auto;
-
-    margin-bottom:25px;
-
-}
-
-footer p{
-
-    color:#a7a7a7;
-
-    margin-top:10px;
-
-}
-
-.footer-links{
-
-    display:flex;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:30px;
-
-    margin-top:30px;
-
-}
-
-.footer-links a{
-
-    color:#c7c7c7;
-
-    transition:.3s;
-
-}
-
-.footer-links a:hover{
-
-    color:#ff6b00;
-
-}
-.social-links{
-
-    display:flex;
-    
-    justify-content:center;
-    
-    gap:25px;
-    
-    margin:30px 0;
-    
-    flex-wrap:wrap;
+    color:inherit;
     
     }
-    
-    .social-links a{
-    
-    color:#bdbdbd;
-    
-    transition:.3s;
-    
-    font-weight:600;
-    
-    }
-    
-    .social-links a:hover{
-    
-    color:#ff6b00;
-    
-    }
-    
-    footer hr{
-    
-    margin:35px 0;
-    
-    border:none;
-    
-    height:1px;
-    
-    background:#22324b;
-    
-    }
-    
-    .copyright{
-    
-    color:#8d96a6;
-    
-    font-size:15px;
-    
-    }
-    .developer{
-
-        margin-top:18px;
-        
-        font-size:14px;
-        
-        color:#6f7a8c;
-        
-        }
-/* ===========================
-   RESPONSIVE
-=========================== */
-
-@media (max-width:1100px){
-
-    .hero-content,
-    .passport-wrapper,
-    .community-box{
-    
-    grid-template-columns:1fr;
-    
-    text-align:center;
-    
-    }
-    
-    .hero-right{
-    
-    order:-1;
-    
-    }
-    
-    .hero p{
-    
-    margin:auto;
-    
-    }
-    
-    .hero-buttons{
-    
-    justify-content:center;
-    
-    }
-    
-    .hero-stats{
-    
-    justify-content:center;
-    
-    }
-    
-    .sports-grid,
-    .badge-grid{
-    
-    grid-template-columns:repeat(2,1fr);
-    
-    }
-    
-    }
-    
-    @media (max-width:768px){
-    
-    .nav-container{
-    
-    flex-direction:column;
-    
-    height:auto;
-    
-    padding:20px 0;
-    
-    gap:20px;
-    
-    }
-    
-    .nav-links{
-    
-    flex-wrap:wrap;
-    
-    justify-content:center;
-    
-    gap:20px;
-    
-    }
-    
-    .hero{
-    
-    padding-top:180px;
-    
-    }
-    
-    .hero h1{
-    
-    font-size:48px;
-    
-    }
-    
-    .hero p{
-    
-    font-size:17px;
-    
-    }
-    
-    .hero-buttons{
-    
-    flex-direction:column;
-    
-    align-items:center;
-    
-    }
-    
-    .hero-stats{
-    
-    flex-direction:column;
-    
-    gap:25px;
-    
-    }
-    
-    .sports-grid,
-    .badge-grid{
-    
-    grid-template-columns:1fr;
-    
-    }
-    
-    .community-box{
-    
-    padding:35px;
-    
-    }
-    
-    .passport-content h3,
-    .community-box h2{
-    
-    font-size:34px;
-    
-    }
-    
-    .section-title{
-    
-    font-size:38px;
-    
-    }
-    
-    }
-    
-    @media (max-width:480px){
     
     .container{
     
-    width:92%;
+    width:min(1200px,92%);
+    margin:auto;
+    
+    }
+    
+    
+    /* ==========================================
+    NAVBAR
+    ========================================== */
+    
+    .navbar{
+    
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+    background:rgba(6,11,22,.88);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    
+    }
+    
+    .nav-container{
+    
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:78px;
     
     }
     
     .logo img{
     
-    height:45px;
+    height:52px;
+    
+    }
+    
+    .nav-links{
+    
+    display:flex;
+    align-items:center;
+    gap:35px;
+    list-style:none;
+    
+    }
+    
+    .nav-links a{
+    
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+    
+    }
+    
+    .nav-links a:hover{
+    
+    color:var(--primary);
+    
+    }
+    
+    .nav-actions{
+    
+    display:flex;
+    align-items:center;
+    gap:15px;
+    
+    }
+    
+    .btn-login{
+    
+    padding:12px 28px;
+    border-radius:40px;
+    background:var(--primary);
+    color:#fff;
+    font-weight:700;
+    transition:.3s;
+    
+    }
+    
+    .btn-login:hover{
+    
+    transform:translateY(-2px);
+    box-shadow:0 12px 30px rgba(255,107,0,.35);
+    
+    }
+    
+    
+    /* ==========================================
+    MENU
+    ========================================== */
+    
+    .menu-toggle{
+    
+    display:none;
+    font-size:32px;
+    cursor:pointer;
+    color:white;
+    
+    }
+    
+    
+    /* ==========================================
+    HERO
+    ========================================== */
+    
+    .hero{
+    
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    position:relative;
+    padding-top:120px;
+    overflow:hidden;
+    
+    }
+    
+    .hero-overlay{
+    
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+    135deg,
+    rgba(255,107,0,.12),
+    transparent,
+    rgba(0,162,255,.12)
+    );
+    
+    }
+    
+    .hero-content{
+    
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:60px;
+    position:relative;
+    z-index:2;
+    
+    }
+    
+    .hero-tag{
+    
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:50px;
+    background:rgba(255,255,255,.08);
+    color:#ffb36b;
+    font-size:14px;
+    margin-bottom:25px;
     
     }
     
     .hero h1{
     
-    font-size:36px;
+    font-size:72px;
+    font-weight:900;
+    line-height:1.05;
+    margin-bottom:25px;
     
     }
     
-    .primary-btn,
+    .hero p{
+    
+    font-size:18px;
+    color:var(--gray);
+    max-width:600px;
+    margin-bottom:35px;
+    
+    }
+    
+    .hero-buttons{
+    
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    
+    }
+    
+    .primary-btn{
+    
+    padding:16px 34px;
+    border-radius:50px;
+    background:var(--primary);
+    color:white;
+    font-weight:700;
+    transition:.3s;
+    
+    }
+    
+    .primary-btn:hover{
+    
+    transform:translateY(-3px);
+    box-shadow:0 14px 30px rgba(255,107,0,.35);
+    
+    }
+    
     .secondary-btn{
     
-    width:100%;
+    padding:16px 34px;
+    border-radius:50px;
+    border:1px solid rgba(255,255,255,.2);
+    font-weight:700;
+    transition:.3s;
     
-    text-align:center;
+    }
+    
+    .secondary-btn:hover{
+    
+    background:white;
+    color:#111;
+    
+    }
+    
+    .hero-right{
+    
+    display:flex;
+    justify-content:center;
     
     }
     
     .hero-right img{
     
-    max-width:100%;
+    width:100%;
+    max-width:560px;
+    animation:float 5s ease-in-out infinite;
     
     }
     
-    .footer-logo{
     
-    width:150px;
+    /* ==========================================
+    HERO STATS
+    ========================================== */
     
-    }
+    .hero-stats{
     
-    }
-    
-    /* ===========================
-    ANIMATIONS
-    =========================== */
-    
-    @keyframes fadeUp{
-    
-    0%{
-    
-    opacity:0;
-    
-    transform:translateY(40px);
+    display:flex;
+    gap:50px;
+    margin-top:45px;
+    flex-wrap:wrap;
     
     }
     
-    100%{
+    .hero-stats h2{
     
-    opacity:1;
-    
-    transform:translateY(0);
-    
-    }
+    font-size:34px;
+    color:var(--primary);
     
     }
     
-    .hero,
-    .sports,
-    .passport,
-    .badges,
-    .community{
+    .hero-stats span{
     
-    animation:fadeUp .9s ease;
+    color:var(--gray);
     
     }
     
-    .sport-card,
-    .badge-card,
-    .primary-btn,
-    .secondary-btn{
     
-    transition:all .35s ease;
+    /* ==========================================
+    ANIMATION
+    ========================================== */
     
-    }
-    
-    /* Floating Animation */
-    
-    @keyframes floating{
+    @keyframes float{
     
     0%{
     
@@ -954,7 +319,7 @@ footer p{
     
     50%{
     
-    transform:translateY(-10px);
+    transform:translateY(-15px);
     
     }
     
@@ -965,84 +330,748 @@ footer p{
     }
     
     }
-    
-    .hero-right img{
-    
-    animation:floating 4s ease-in-out infinite;
-    
-    }
-    
-    /* ===========================
-    CUSTOM SCROLLBAR
-    =========================== */
-    
-    ::-webkit-scrollbar{
-    
-    width:10px;
+    /* ==========================================
+SECTION COMMON
+========================================== */
+
+section{
+
+    padding:100px 0;
     
     }
     
-    ::-webkit-scrollbar-track{
+    .section-tag{
     
-    background:#08111f;
+    display:inline-block;
+    padding:8px 18px;
+    background:rgba(255,107,0,.12);
+    color:var(--primary);
+    border-radius:40px;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:18px;
     
     }
     
-    ::-webkit-scrollbar-thumb{
+    .section-title{
     
-    background:#ff6b00;
+    font-size:48px;
+    font-weight:800;
+    margin-bottom:15px;
+    text-align:center;
     
+    }
+    
+    .section-subtitle{
+    
+    max-width:720px;
+    margin:0 auto 60px;
+    text-align:center;
+    color:var(--gray);
+    font-size:18px;
+    
+    }
+    
+    
+    /* ==========================================
+    SPORTS
+    ========================================== */
+    
+    .sports{
+    
+    background:#08111d;
+    
+    }
+    
+    .sports-grid{
+    
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    
+    }
+    
+    .sport-card{
+    
+    background:var(--card);
+    padding:35px;
+    border-radius:22px;
+    border:1px solid var(--border);
+    transition:.35s;
+    display:block;
+    text-align:center;
+    
+    }
+    
+    .sport-card:hover{
+    
+    transform:translateY(-10px);
+    border-color:var(--primary);
+    box-shadow:0 18px 45px rgba(0,0,0,.35);
+    
+    }
+    
+    .sport-card img{
+    
+    width:90px;
+    height:90px;
+    margin:auto;
+    margin-bottom:25px;
+    
+    }
+    
+    .sport-card h3{
+    
+    font-size:24px;
+    margin-bottom:15px;
+    
+    }
+    
+    .sport-card p{
+    
+    color:var(--gray);
+    margin-bottom:20px;
+    
+    }
+    
+    .sport-card span{
+    
+    color:var(--primary);
+    font-weight:700;
+    
+    }
+    
+    
+    /* ==========================================
+    PASSPORT
+    ========================================== */
+    
+    .passport{
+    
+    background:#050b16;
+    
+    }
+    
+    .passport-wrapper{
+    
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+    
+    }
+    
+    .passport-image{
+    
+    display:flex;
+    justify-content:center;
+    
+    }
+    
+    .passport-image img{
+    
+    max-width:420px;
+    filter:drop-shadow(0 30px 60px rgba(0,0,0,.45));
+    
+    }
+    
+    .passport-content h2{
+    
+    font-size:48px;
+    margin:15px 0 25px;
+    
+    }
+    
+    .passport-content p{
+    
+    font-size:18px;
+    color:var(--gray);
+    margin-bottom:35px;
+    
+    }
+    
+    .passport-features{
+    
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    margin-bottom:40px;
+    
+    }
+    
+    .passport-features div{
+    
+    background:rgba(255,255,255,.05);
+    padding:15px 18px;
+    border-radius:12px;
+    font-size:15px;
+    
+    }
+    
+    
+    /* ==========================================
+    BADGES
+    ========================================== */
+    
+    .badges{
+    
+    background:#08111d;
+    
+    }
+    
+    .badge-grid{
+    
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:30px;
+    
+    }
+    
+    .badge-card{
+    
+    background:var(--card);
+    padding:35px;
+    text-align:center;
     border-radius:20px;
+    border:1px solid var(--border);
+    transition:.35s;
     
     }
     
-    ::-webkit-scrollbar-thumb:hover{
+    .badge-card:hover{
     
-    background:#ff8c32;
-    
-    }
-    
-    /* ===========================
-    SELECTION
-    =========================== */
-    
-    ::selection{
-    
-    background:#ff6b00;
-    
-    color:#fff;
+    transform:translateY(-10px);
+    border-color:#ffb300;
     
     }
     
-    /* ===========================
-    EXTRA POLISH
-    =========================== */
+    .badge-card img{
     
-    section{
+    width:95px;
+    margin:auto;
+    margin-bottom:20px;
     
-    position:relative;
+    }
+    
+    .badge-card h3{
+    
+    font-size:22px;
+    margin-bottom:12px;
+    
+    }
+    
+    .badge-card p{
+    
+    font-size:15px;
+    color:var(--gray);
+    
+    }
+    
+    
+    /* ==========================================
+    COMMUNITY
+    ========================================== */
+    
+    .community{
+    
+    background:linear-gradient(135deg,#091524,#101f36);
+    
+    }
+    
+    .community-box{
+    
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:70px;
+    
+    }
+    
+    .community-content h2{
+    
+    font-size:46px;
+    margin:20px 0;
+    
+    }
+    
+    .community-content p{
+    
+    font-size:18px;
+    color:var(--gray);
+    margin-bottom:35px;
+    
+    }
+    
+    .community-image{
+    
+    display:flex;
+    justify-content:center;
+    
+    }
+    
+    .community-image img{
+    
+    max-width:420px;
+    animation:float 5s ease-in-out infinite;
+    
+    }
+    /* ==========================================
+ABOUT
+========================================== */
+
+.about{
+
+    background:#050b16;
+    
+    }
+    
+    .about-wrapper{
+    
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+    
+    }
+    
+    .about-left h2{
+    
+    font-size:48px;
+    margin:18px 0;
+    
+    }
+    
+    .about-left p{
+    
+    font-size:18px;
+    color:var(--gray);
+    margin-bottom:20px;
+    
+    }
+    
+    .about-right{
+    
+    display:flex;
+    justify-content:center;
+    
+    }
+    
+    .about-right img{
+    
+    max-width:320px;
+    
+    }
+    
+    
+    /* ==========================================
+    FOUNDER
+    ========================================== */
+    
+    .founder{
+    
+    background:#08111d;
+    
+    }
+    
+    .founder-box{
+    
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:60px;
+    align-items:center;
+    
+    }
+    
+    .founder-image{
+    
+    display:flex;
+    justify-content:center;
+    
+    }
+    
+    .founder-image img{
+    
+    width:260px;
+    height:260px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid var(--primary);
+    
+    }
+    
+    .founder-content h2{
+    
+    font-size:42px;
+    margin:18px 0;
+    
+    }
+    
+    .founder-content p{
+    
+    font-size:18px;
+    color:var(--gray);
+    margin-bottom:30px;
+    
+    }
+    
+    
+    /* ==========================================
+    FOOTER
+    ========================================== */
+    
+    footer{
+    
+    background:#03070d;
+    padding:80px 0 40px;
+    text-align:center;
+    
+    }
+    
+    .footer-logo{
+    
+    width:90px;
+    margin:auto;
+    margin-bottom:20px;
+    
+    }
+    
+    footer h3{
+    
+    font-size:30px;
+    margin-bottom:15px;
+    
+    }
+    
+    footer p{
+    
+    color:var(--gray);
+    max-width:700px;
+    margin:auto;
+    
+    }
+    
+    .footer-links{
+    
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    margin:40px 0;
+    
+    }
+    
+    .footer-links a{
+    
+    transition:.3s;
+    
+    }
+    
+    .footer-links a:hover{
+    
+    color:var(--primary);
+    
+    }
+    
+    .social-links{
+    
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-bottom:30px;
+    
+    }
+    
+    .social-links a{
+    
+    padding:10px 20px;
+    border-radius:30px;
+    background:#111827;
+    transition:.3s;
+    
+    }
+    
+    .social-links a:hover{
+    
+    background:var(--primary);
+    
+    }
+    
+    footer hr{
+    
+    margin:35px 0;
+    border:none;
+    height:1px;
+    background:rgba(255,255,255,.08);
+    
+    }
+    
+    .copyright{
+    
+    font-size:14px;
+    color:#888;
+    
+    }
+    
+    .developer{
+    
+    padding:15px;
+    text-align:center;
+    background:#000;
+    color:#888;
+    font-size:14px;
+    
+    }
+    
+    
+    /* ==========================================
+    MODAL
+    ========================================== */
+    
+    .modal{
+    
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    z-index:9999;
+    justify-content:center;
+    align-items:center;
+    
+    }
+    
+    .modal-content{
+    
+    background:#111827;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    width:min(420px,90%);
+    
+    }
+    
+    .modal-content h2{
+    
+    margin-bottom:15px;
+    
+    }
+    
+    .modal-content p{
+    
+    color:var(--gray);
+    margin-bottom:25px;
+    
+    }
+    
+    .modal-content button{
+    
+    padding:14px 30px;
+    border:none;
+    border-radius:40px;
+    background:var(--primary);
+    color:white;
+    cursor:pointer;
+    font-weight:700;
+    
+    }
+    
+    
+    /* ==========================================
+    SCROLL INDICATOR
+    ========================================== */
+    
+    .scroll-indicator{
+    
+    position:absolute;
+    bottom:25px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:34px;
+    color:white;
+    animation:bounce 1.6s infinite;
+    
+    }
+    
+    @keyframes bounce{
+    
+    0%,100%{
+    
+    transform:translate(-50%,0);
+    
+    }
+    
+    50%{
+    
+    transform:translate(-50%,-10px);
+    
+    }
+    
+    }
+    
+    
+    /* ==========================================
+    RESPONSIVE
+    ========================================== */
+    
+    @media(max-width:992px){
+    
+    .hero-content,
+    .passport-wrapper,
+    .community-box,
+    .about-wrapper,
+    .founder-box{
+    
+    grid-template-columns:1fr;
+    text-align:center;
+    
+    }
+    
+    .hero h1{
+    
+    font-size:52px;
+    
+    }
+    
+    .passport-features{
+    
+    grid-template-columns:1fr;
+    
+    }
+    
+    .hero-right{
+    
+    margin-top:40px;
+    
+    }
+    
+    }
+    
+    @media(max-width:768px){
+    
+    .nav-links{
+    
+    display:none;
+    position:absolute;
+    top:78px;
+    left:0;
+    width:100%;
+    background:#08111d;
+    padding:25px 0;
+    flex-direction:column;
+    gap:20px;
+    
+    }
+    
+    .nav-links.active{
+    
+    display:flex;
+    
+    }
+    
+    .menu-toggle{
+    
+    display:block;
+    
+    }
+    
+    .btn-login{
+    
+    display:none;
+    
+    }
+    
+    .hero{
+    
+    padding-top:110px;
+    
+    }
+    
+    .hero h1{
+    
+    font-size:40px;
+    
+    }
+    
+    .hero p{
+    
+    font-size:16px;
+    
+    }
+    
+    .section-title{
+    
+    font-size:34px;
+    
+    }
+    
+    .passport-content h2,
+    .community-content h2,
+    .about-left h2,
+    .founder-content h2{
+    
+    font-size:34px;
+    
+    }
+    
+    .hero-stats{
+    
+    justify-content:center;
+    
+    }
+    
+    .footer-links{
+    
+    flex-direction:column;
+    gap:15px;
+    
+    }
+    
+    .social-links{
+    
+    flex-wrap:wrap;
+    
+    }
+    
+    }
+    
+    @media(max-width:480px){
+    
+    .hero h1{
+    
+    font-size:32px;
     
     }
     
     .primary-btn,
-    .secondary-btn,
-    .btn-login{
+    .secondary-btn{
     
-    cursor:pointer;
-    
-    }
-    
-    .sport-card,
-    .badge-card{
-    
-    cursor:pointer;
+    width:100%;
+    text-align:center;
     
     }
     
-    .hero-right img,
-    .passport-image img,
-    .community-box img{
+    .hero-buttons{
     
-    user-select:none;
+    flex-direction:column;
+    
+    }
+    
+    .hero-right img{
+    
+    max-width:320px;
+    
+    }
+    
+    .passport-image img{
+    
+    max-width:280px;
+    
+    }
+    
+    .badge-card,
+    .sport-card{
+    
+    padding:25px;
+    
+    }
     
     }

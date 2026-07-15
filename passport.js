@@ -8,7 +8,7 @@ import {
     doc,
     getDoc
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-
+import QRCode from "https://cdn.jsdelivr.net/npm/qrcode@1.5.3/+esm";
 // ==========================================
 // Elements
 // ==========================================
@@ -29,7 +29,7 @@ const memberSince = document.getElementById("memberSince");
 
 const downloadBtn = document.getElementById("downloadPassport");
 const shareBtn = document.getElementById("sharePassport");
-
+const passportQR = document.getElementById("passportQR");
 // ==========================================
 // Check Login
 // ==========================================
@@ -87,7 +87,26 @@ async function loadPassport(uid){
 
         passportBio.textContent =
         data.bio || "No bio added yet.";
+// Generate QR Code
 
+const qrData = `https://fanvora.in/passport.html?id=${uid}`;
+
+passportQR.innerHTML = "";
+
+const canvas = document.createElement("canvas");
+
+QRCode.toCanvas(canvas, qrData, {
+    width: 150
+}, function(error) {
+
+    if (error) {
+        console.error(error);
+        return;
+    }
+
+    passportQR.appendChild(canvas);
+
+});
         if(data.joinedAt){
 
             const date =
@@ -112,13 +131,31 @@ async function loadPassport(uid){
 // Download Passport
 // ==========================================
 
-if(downloadBtn){
+if (downloadBtn) {
 
-downloadBtn.addEventListener("click",()=>{
+    downloadBtn.addEventListener("click", async () => {
 
-alert("🚀 PDF Download Coming Soon!");
+        const { jsPDF } = window.jspdf;
 
-});
+        const card = document.getElementById("passportCard");
+
+        const canvas = await html2canvas(card, {
+            scale: 2,
+            backgroundColor: null
+        });
+
+        const imgData = canvas.toDataURL("image/png");
+
+        const pdf = new jsPDF("p", "mm", "a4");
+
+        const pdfWidth = 190;
+        const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+
+        pdf.addImage(imgData, "PNG", 10, 10, pdfWidth, pdfHeight);
+
+        pdf.save("Fanvora-Passport.pdf");
+
+    });
 
 }
 

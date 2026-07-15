@@ -22,8 +22,74 @@
 </head>
 
 <body>
+    <div class="passport-top">
+
+        <div class="chip"></div>
+    
+        <img
+            src="assets/logo/logo.png"
+            class="passport-logo"
+            alt="Fanvora">
+    
+    </div>
+    
+    <div class="passport-middle">
+    
+        <div class="passport-left">
+    
+            <img
+                src="assets/avatars/fan-avatar.png"
+                id="passportAvatar"
+                class="passport-avatar">
+    
+            <h2 id="passportName">
+                Loading...
+            </h2>
+    
+            <span id="passportSport">
+                Football Fan
+            </span>
+    
+        </div>
+    
+        <div class="passport-right">
+    
+            <div class="info-card">
+                <label>Fan ID</label>
+                <h3 id="passportId">------</h3>
+            </div>
+    
+            <div class="info-card">
+                <label>Country</label>
+                <h3 id="passportCountry">India</h3>
+            </div>
+    
+            <div class="info-card">
+                <label>Favourite Team</label>
+                <h3 id="passportTeam">Spain</h3>
+            </div>
+    
+            <div class="info-card">
+                <label>Level</label>
+                <h3 id="passportLevel">1</h3>
+            </div>
+    
+            <div class="info-card">
+                <label>XP</label>
+                <h3 id="passportXP">120 XP</h3>
+            </div>
+    
+            <div class="info-card">
+                <label>Member Since</label>
+                <h3 id="memberSince">2026</h3>
+            </div>
+    
+        </div>
+    
+    </div>
 
 <div class="passport-page">
+    
 
 <header>
 
@@ -45,7 +111,8 @@ Fanvora Digital Passport
 
 <div class="passport-container">
 
-<div class="passport-card">
+<div class="passport-card"
+id="passportCard">
 
 <!-- LEFT -->
 
@@ -160,20 +227,30 @@ Loading...
 <div class="passport-bottom">
 
     <div class="qr-box">
-    
-    <img
-    src="assets/passport/qr.png"
-    id="passportQR"
-    alt="QR Code">
-    
-    <p>
-    
-    Scan to verify Fan Passport
-    
-    </p>
-    
+
+        <div id="passportQR"></div>
+
+        <p>Scan To Verify Passport</p>
+
     </div>
-    
+
+    <div class="passport-actions">
+
+        <button id="downloadPassport">
+
+            ⬇ Download PDF
+
+        </button>
+
+        <button id="sharePassport">
+
+            🔗 Share Passport
+
+        </button>
+
+    </div>
+
+</div>
     <div class="passport-info">
     
     <h2>
@@ -228,8 +305,11 @@ Loading...
     
     </div>
     
-    <script type="module" src="passport.js"></script>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script type="module" src="passport.js"></script>
     </body>
     
     </html>

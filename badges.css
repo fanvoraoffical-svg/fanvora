@@ -1,0 +1,780 @@
+/* ==========================================
+   FANVORA BADGES V1.1
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    }
+    
+    :root{
+    
+    --primary:#ff6b00;
+    --secondary:#08111d;
+    --background:#050b16;
+    --card:#111827;
+    --white:#ffffff;
+    --gray:#b8c1cc;
+    --border:rgba(255,255,255,.08);
+    
+    }
+    
+    body{
+    
+    font-family:'Inter',sans-serif;
+    background:var(--background);
+    color:var(--white);
+    overflow-x:hidden;
+    line-height:1.7;
+    
+    }
+    
+    a{
+    
+    text-decoration:none;
+    color:inherit;
+    
+    }
+    
+    img{
+    
+    display:block;
+    max-width:100%;
+    
+    }
+    
+    .container{
+    
+    width:min(1200px,92%);
+    margin:auto;
+    
+    }
+    
+    /* ==========================================
+    NAVBAR
+    ========================================== */
+    
+    .navbar{
+    
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:rgba(5,11,22,.9);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    
+    }
+    
+    .nav-container{
+    
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:80px;
+    
+    }
+    
+    .logo img{
+    
+    height:55px;
+    
+    }
+    
+    .nav-links{
+    
+    display:flex;
+    list-style:none;
+    gap:35px;
+    
+    }
+    
+    .nav-links a{
+    
+    font-weight:600;
+    transition:.3s;
+    
+    }
+    
+    .nav-links a:hover{
+    
+    color:var(--primary);
+    
+    }
+    
+    .back-btn{
+    
+    padding:12px 24px;
+    border-radius:40px;
+    background:var(--primary);
+    font-weight:700;
+    transition:.3s;
+    
+    }
+    
+    .back-btn:hover{
+    
+    transform:translateY(-3px);
+    
+    }
+    
+    /* ==========================================
+    HERO
+    ========================================== */
+    
+    .hero{
+    
+    padding:120px 0 80px;
+    text-align:center;
+    background:linear-gradient(
+    135deg,
+    rgba(255,107,0,.12),
+    transparent,
+    rgba(0,162,255,.08)
+    );
+    
+    }
+    
+    .hero-tag{
+    
+    display:inline-block;
+    padding:8px 20px;
+    border-radius:40px;
+    background:rgba(255,255,255,.08);
+    color:var(--primary);
+    font-size:14px;
+    margin-bottom:25px;
+    
+    }
+    
+    .hero h1{
+    
+    font-size:62px;
+    font-weight:900;
+    margin-bottom:20px;
+    
+    }
+    
+    .hero p{
+    
+    max-width:700px;
+    margin:auto;
+    font-size:18px;
+    color:var(--gray);
+    
+    }
+    
+    /* ==========================================
+    SUMMARY
+    ========================================== */
+    
+    .summary{
+    
+    padding:80px 0;
+    
+    }
+    
+    .summary-grid{
+    
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+    
+    }
+    
+    .summary-card{
+    
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    transition:.3s;
+    
+    }
+    
+    .summary-card:hover{
+    
+    transform:translateY(-8px);
+    border-color:var(--primary);
+    
+    }
+    
+    .summary-card h2{
+    
+    font-size:42px;
+    color:var(--primary);
+    margin-bottom:10px;
+    
+    }
+    
+    .summary-card p{
+    
+    color:var(--gray);
+    
+    }
+    /* ==========================================
+BADGES SECTION
+========================================== */
+
+.badges-section{
+
+    padding:80px 0;
+    
+    }
+    
+    .section-title{
+    
+    font-size:42px;
+    font-weight:800;
+    text-align:center;
+    margin-bottom:50px;
+    
+    }
+    
+    .badge-grid{
+    
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    
+    }
+    
+    /* ==========================================
+    BADGE CARD
+    ========================================== */
+    
+    .badge-card{
+    
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:22px;
+    padding:35px 25px;
+    text-align:center;
+    transition:.35s;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+    
+    }
+    
+    .badge-card:hover{
+    
+    transform:translateY(-10px);
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+    
+    }
+    
+    .badge-card img{
+    
+    width:100px;
+    height:100px;
+    margin:auto;
+    margin-bottom:20px;
+    transition:.35s;
+    
+    }
+    
+    .badge-card:hover img{
+    
+    transform:scale(1.08);
+    
+    }
+    
+    .badge-card h3{
+    
+    font-size:24px;
+    margin-bottom:12px;
+    
+    }
+    
+    .badge-card p{
+    
+    font-size:15px;
+    color:var(--gray);
+    margin-bottom:20px;
+    
+    }
+    
+    /* ==========================================
+    STATUS
+    ========================================== */
+    
+    .badge-status{
+    
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:40px;
+    font-size:13px;
+    font-weight:700;
+    
+    }
+    
+    .unlocked-status{
+    
+    background:#1b5e20;
+    color:#7CFF8A;
+    
+    }
+    
+    .locked-status{
+    
+    background:#4b5563;
+    color:#d1d5db;
+    
+    }
+    
+    /* ==========================================
+    UNLOCKED
+    ========================================== */
+    
+    .badge-card.unlocked{
+    
+    border:2px solid #22c55e;
+    
+    }
+    
+    .badge-card.unlocked::before{
+    
+    content:"🏆";
+    position:absolute;
+    top:15px;
+    right:18px;
+    font-size:22px;
+    
+    }
+    
+    /* ==========================================
+    LOCKED
+    ========================================== */
+    
+    .badge-card.locked{
+    
+    opacity:.82;
+    
+    }
+    
+    .badge-card.locked img{
+    
+    filter:grayscale(100%);
+    
+    }
+    
+    .badge-card.locked::before{
+    
+    content:"🔒";
+    position:absolute;
+    top:15px;
+    right:18px;
+    font-size:20px;
+    
+    }
+    
+    /* ==========================================
+    RARITY COLORS
+    ========================================== */
+    
+    .common{
+    
+    border-color:#9ca3af;
+    
+    }
+    
+    .rare{
+    
+    border-color:#3b82f6;
+    
+    }
+    
+    .epic{
+    
+    border-color:#a855f7;
+    
+    }
+    
+    .legendary{
+    
+    border-color:#f59e0b;
+    
+    }
+    
+    .mythic{
+    
+    border-color:#ef4444;
+    
+    }
+    
+    /* ==========================================
+    BADGE SHINE
+    ========================================== */
+    
+    .badge-card::after{
+    
+    content:"";
+    position:absolute;
+    top:-120%;
+    left:-40%;
+    width:60%;
+    height:300%;
+    background:rgba(255,255,255,.08);
+    transform:rotate(25deg);
+    transition:.7s;
+    
+    }
+    
+    .badge-card:hover::after{
+    
+    left:130%;
+    
+    }
+    /* ==========================================
+PROGRESS SECTION
+========================================== */
+
+.progress-section{
+
+    padding:100px 0;
+    background:#08111d;
+    
+    }
+    
+    .progress-card{
+    
+    background:var(--card);
+    padding:35px;
+    border-radius:20px;
+    border:1px solid var(--border);
+    margin-bottom:30px;
+    
+    }
+    
+    .progress-card h3{
+    
+    font-size:26px;
+    margin-bottom:15px;
+    
+    }
+    
+    .progress-card h4{
+    
+    font-size:22px;
+    color:var(--primary);
+    margin:10px 0;
+    
+    }
+    
+    .progress-card p{
+    
+    color:var(--gray);
+    
+    }
+    
+    /* Progress Bar */
+    
+    .progress-bar{
+    
+    width:100%;
+    height:16px;
+    background:#1f2937;
+    border-radius:30px;
+    overflow:hidden;
+    margin:20px 0;
+    
+    }
+    
+    .progress-fill{
+    
+    height:100%;
+    background:linear-gradient(
+    90deg,
+    #ff6b00,
+    #ffb347
+    );
+    border-radius:30px;
+    
+    }
+    
+    /* ==========================================
+    CTA SECTION
+    ========================================== */
+    
+    .cta-section{
+    
+    padding:100px 0;
+    text-align:center;
+    background:linear-gradient(
+    135deg,
+    rgba(255,107,0,.10),
+    rgba(0,0,0,.2)
+    );
+    
+    }
+    
+    .cta-section h2{
+    
+    font-size:46px;
+    margin-bottom:20px;
+    
+    }
+    
+    .cta-section p{
+    
+    max-width:650px;
+    margin:auto;
+    color:var(--gray);
+    margin-bottom:40px;
+    
+    }
+    
+    .cta-buttons{
+    
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    
+    }
+    
+    .primary-btn{
+    
+    display:inline-block;
+    padding:16px 36px;
+    border-radius:40px;
+    background:var(--primary);
+    font-weight:700;
+    transition:.35s;
+    
+    }
+    
+    .primary-btn:hover{
+    
+    transform:translateY(-3px);
+    box-shadow:0 15px 30px rgba(255,107,0,.35);
+    
+    }
+    
+    .secondary-btn{
+    
+    display:inline-block;
+    padding:16px 36px;
+    border-radius:40px;
+    border:2px solid var(--primary);
+    font-weight:700;
+    transition:.35s;
+    
+    }
+    
+    .secondary-btn:hover{
+    
+    background:var(--primary);
+    
+    }
+    
+    /* ==========================================
+    FOOTER
+    ========================================== */
+    
+    footer{
+    
+    padding:70px 0 35px;
+    background:#03070d;
+    text-align:center;
+    
+    }
+    
+    .footer-logo{
+    
+    width:90px;
+    margin:auto;
+    margin-bottom:20px;
+    
+    }
+    
+    footer h3{
+    
+    font-size:30px;
+    margin-bottom:15px;
+    
+    }
+    
+    footer p{
+    
+    color:var(--gray);
+    margin-bottom:20px;
+    
+    }
+    
+    .footer-links{
+    
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    margin:35px 0;
+    
+    }
+    
+    .footer-links a{
+    
+    transition:.3s;
+    
+    }
+    
+    .footer-links a:hover{
+    
+    color:var(--primary);
+    
+    }
+    
+    footer hr{
+    
+    border:none;
+    height:1px;
+    background:rgba(255,255,255,.08);
+    margin:30px 0;
+    
+    }
+    
+    /* ==========================================
+    FADE ANIMATION
+    ========================================== */
+    
+    .badge-card,
+    .summary-card,
+    .progress-card{
+    
+    opacity:0;
+    transform:translateY(40px);
+    transition:.8s;
+    
+    }
+    
+    .show{
+    
+    opacity:1;
+    transform:translateY(0);
+    
+    }
+    
+    /* ==========================================
+    RESPONSIVE
+    ========================================== */
+    
+    @media(max-width:992px){
+    
+    .hero h1{
+    
+    font-size:48px;
+    
+    }
+    
+    .section-title{
+    
+    font-size:36px;
+    
+    }
+    
+    }
+    
+    @media(max-width:768px){
+    
+    .nav-container{
+    
+    flex-direction:column;
+    height:auto;
+    padding:15px 0;
+    
+    }
+    
+    .nav-links{
+    
+    flex-direction:column;
+    gap:18px;
+    margin-top:15px;
+    
+    }
+    
+    .hero{
+    
+    padding:90px 0 60px;
+    
+    }
+    
+    .hero h1{
+    
+    font-size:36px;
+    
+    }
+    
+    .hero p{
+    
+    font-size:16px;
+    
+    }
+    
+    .summary-grid{
+    
+    grid-template-columns:1fr;
+    
+    }
+    
+    .badge-grid{
+    
+    grid-template-columns:1fr;
+    
+    }
+    
+    .cta-buttons{
+    
+    flex-direction:column;
+    
+    }
+    
+    .primary-btn,
+    .secondary-btn{
+    
+    width:100%;
+    text-align:center;
+    
+    }
+    
+    .footer-links{
+    
+    flex-direction:column;
+    gap:15px;
+    
+    }
+    
+    }
+    
+    @media(max-width:480px){
+    
+    .hero h1{
+    
+    font-size:30px;
+    
+    }
+    
+    .section-title{
+    
+    font-size:28px;
+    
+    }
+    
+    .summary-card,
+    .badge-card,
+    .progress-card{
+    
+    padding:25px;
+    
+    }
+    
+    .badge-card img{
+    
+    width:80px;
+    height:80px;
+    
+    }
+    
+    }

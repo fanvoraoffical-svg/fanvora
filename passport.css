@@ -759,3 +759,638 @@ background:var(--orange);
 color:#fff;
 
 }
+/* ==========================================
+   PASSPORT V2 PREMIUM
+========================================== */
+
+.passport-card{
+
+    background:linear-gradient(
+    135deg,
+    #101c33,
+    #07111f);
+
+    border:2px solid rgba(255,107,0,.25);
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 25px 70px rgba(0,0,0,.45),
+    0 0 40px rgba(255,107,0,.15);
+
+}
+
+/* ========================= */
+
+.passport-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:30px;
+
+}
+
+.chip{
+
+    width:72px;
+
+    height:52px;
+
+    border-radius:12px;
+
+    background:linear-gradient(
+    135deg,
+    #ffd76a,
+    #d4a200);
+
+    box-shadow:
+    inset 0 0 10px rgba(255,255,255,.4);
+
+}
+
+.passport-logo{
+
+    width:120px;
+
+}
+
+/* ========================= */
+
+.passport-middle{
+
+    display:grid;
+
+    grid-template-columns:280px 1fr;
+
+    gap:35px;
+
+    padding:30px;
+
+}
+
+/* ========================= */
+
+.passport-left{
+
+    text-align:center;
+
+}
+
+.passport-avatar{
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:5px solid #ff6b00;
+
+    box-shadow:
+    0 0 35px rgba(255,107,0,.45);
+
+}
+
+.passport-left h2{
+
+    margin-top:20px;
+
+    font-size:30px;
+
+}
+
+.passport-left span{
+
+    color:#ff8c32;
+
+    font-weight:600;
+
+}
+/* ==========================================
+   PASSPORT INFO CARDS
+========================================== */
+
+.passport-right{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.info-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:18px;
+
+    padding:18px;
+
+    transition:.35s;
+
+}
+
+.info-card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#ff6b00;
+
+    box-shadow:
+    0 12px 30px rgba(255,107,0,.25);
+
+}
+
+.info-card label{
+
+    display:block;
+
+    color:#ff8c32;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+}
+
+.info-card h3{
+
+    color:#fff;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    word-break:break-word;
+
+}
+
+/* ==========================================
+   PASSPORT BOTTOM
+========================================== */
+
+.passport-bottom{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:30px;
+
+    padding:30px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+/* ==========================================
+   QR BOX
+========================================== */
+
+.qr-box{
+
+    width:190px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    padding:18px;
+
+    text-align:center;
+
+}
+
+#passportQR{
+
+    width:150px;
+
+    height:150px;
+
+    margin:0 auto 12px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#fff;
+
+    border-radius:12px;
+
+}
+
+.qr-box p{
+
+    color:#cfd8e3;
+
+    font-size:14px;
+
+    line-height:1.5;
+
+}
+
+/* ==========================================
+   ACTION BUTTONS
+========================================== */
+
+.passport-actions{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    flex:1;
+
+}
+
+.passport-actions button{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:16px;
+
+    padding:16px 20px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+#downloadPassport{
+
+    background:linear-gradient(
+    135deg,
+    #ff6b00,
+    #ff9d3f);
+
+    color:#fff;
+
+}
+
+#sharePassport{
+
+    background:#1b2a42;
+
+    color:#fff;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.passport-actions button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 15px 30px rgba(255,107,0,.25);
+
+}
+
+/* ==========================================
+   BUTTON ACTIVE EFFECT
+========================================== */
+
+.passport-actions button:active{
+
+    transform:scale(.98);
+
+}
+
+/* ==========================================
+   HOVER GLOW
+========================================== */
+
+.passport-card:hover{
+
+    box-shadow:
+    0 30px 70px rgba(0,0,0,.45),
+    0 0 45px rgba(255,107,0,.25);
+
+    transition:.35s;
+
+}
+
+/* ==========================================
+   QR CANVAS
+========================================== */
+
+#passportQR canvas{
+
+    width:150px !important;
+
+    height:150px !important;
+
+    border-radius:10px;
+
+}
+
+/* ==========================================
+   SMOOTH ANIMATION
+========================================== */
+
+.passport-card,
+.info-card,
+.qr-box,
+.passport-actions button{
+
+    transition:all .35s ease;
+
+}
+/* ==========================================
+   ATM CARD SHINE EFFECT
+========================================== */
+
+.passport-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.passport-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120%;
+
+    left:-40%;
+
+    width:60%;
+
+    height:320%;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.15),
+        transparent
+    );
+
+    transform:rotate(25deg);
+
+    transition:.8s;
+
+}
+
+.passport-card:hover::before{
+
+    left:130%;
+
+}
+
+/* ==========================================
+   BACKGROUND GLOW
+========================================== */
+
+.passport-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:30px;
+
+    pointer-events:none;
+
+    box-shadow:
+        inset 0 0 50px rgba(255,107,0,.08);
+
+}
+
+/* ==========================================
+   INFO CARD ICON EFFECT
+========================================== */
+
+.info-card:hover h3{
+
+    color:#ffb366;
+
+}
+
+/* ==========================================
+   QR BOX EFFECT
+========================================== */
+
+.qr-box:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(255,107,0,.20);
+
+}
+
+/* ==========================================
+   PASSPORT TITLE
+========================================== */
+
+.passport-title{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+.passport-title h1{
+
+    font-size:42px;
+
+    font-weight:800;
+
+    color:#fff;
+
+}
+
+.passport-title p{
+
+    margin-top:10px;
+
+    color:#b8c7d9;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+.passport-middle{
+
+    grid-template-columns:1fr;
+
+}
+
+.passport-right{
+
+    grid-template-columns:1fr 1fr;
+
+}
+
+.passport-bottom{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.passport-actions{
+
+    width:100%;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.passport-top{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.passport-avatar{
+
+    width:140px;
+
+    height:140px;
+
+}
+
+.passport-left h2{
+
+    font-size:24px;
+
+}
+
+.passport-right{
+
+    grid-template-columns:1fr;
+
+}
+
+#passportQR{
+
+    width:130px;
+
+    height:130px;
+
+}
+
+#passportQR canvas{
+
+    width:130px !important;
+
+    height:130px !important;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.passport-card{
+
+    border-radius:20px;
+
+}
+
+.passport-top,
+
+.passport-middle,
+
+.passport-bottom{
+
+    padding:20px;
+
+}
+
+.info-card h3{
+
+    font-size:18px;
+
+}
+
+.passport-actions button{
+
+    font-size:15px;
+
+    padding:14px;
+
+}
+
+}
+
+/* ==========================================
+   ENTRY ANIMATION
+========================================== */
+
+@keyframes passportFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.passport-card{
+
+    animation:passportFade .7s ease;
+
+}

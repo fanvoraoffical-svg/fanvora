@@ -9,37 +9,49 @@
 <title>Fanvora | Where Fans Become Legends</title>
 
 <meta name="description"
-content="Fanvora - The ultimate digital fan passport for football, cricket, basketball and Formula 1 fans.">
+content="Fanvora is the world's first digital sports fan passport platform where fans support nations, earn badges, climb leaderboards and become legends.">
+
+<meta name="keywords"
+content="Football Fans, Cricket Fans, Fan Passport, Sports Community, Fanvora, FIFA, Cricket World Cup">
+
+<meta name="theme-color" content="#07111f">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
 rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+
+<link rel="icon"
+href="assets/logo/logo.png">
 
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
+<!-- ==========================================
+NAVBAR
+========================================== -->
 
 <header class="navbar">
 
 <div class="container nav-container">
 
-<a href="#" class="logo">
+<a href="#hero" class="logo">
 
-<img src="assets/logo/logo.png" alt="Fanvora">
+<img
+src="assets/logo/logo.png"
+alt="Fanvora Logo">
 
 </a>
 
-<nav>
+<nav id="navbar">
 
 <ul class="nav-links">
 
-<li><a href="#">Home</a></li>
+<li><a href="#hero">Home</a></li>
 
 <li><a href="#sports">Sports</a></li>
 
@@ -47,29 +59,51 @@ rel="stylesheet">
 
 <li><a href="#badges">Badges</a></li>
 
-<li><a href="#">Download</a></li>
+<li><a href="#" id="downloadBtn">Download</a></li>
 
 </ul>
 
 </nav>
 
+<div class="nav-actions">
+
 <a href="login.html" class="btn-login">
+
 Login
+
 </a>
+
+<button class="menu-toggle"
+id="menuToggle">
+
+☰
+
+</button>
+
+</div>
 
 </div>
 
 </header>
 
-<!-- ================= HERO ================= -->
+<!-- ==========================================
+HERO
+========================================== -->
 
-<section class="hero">
+<section class="hero"
+id="hero">
 
 <div class="hero-overlay"></div>
 
 <div class="container hero-content">
 
 <div class="hero-left">
+
+<span class="hero-tag">
+
+🌍 THE GLOBAL SPORTS FAN PLATFORM
+
+</span>
 
 <h1>
 
@@ -81,27 +115,32 @@ BECOME LEGENDS
 
 <p>
 
-Own your digital fan identity.
+Join Fanvora and create your Digital Fan Passport.
 
-Unlock achievements.
+Support your favourite nation.
 
-Collect badges.
+Earn XP.
 
-Support your favorite teams.
+Unlock Badges.
 
-Become part of the world's biggest sports community.
+Rise on the Leaderboard.
+
+Become part of the next generation of sports fans.
 
 </p>
 
 <div class="hero-buttons">
 
-<a href="#" class="primary-btn">
+<a href="signup.html"
+class="primary-btn">
 
-Get Started
+Create Free Passport
 
 </a>
 
-<a href="#" class="secondary-btn">
+<a href="#"
+id="watchDemo"
+class="secondary-btn">
 
 Watch Demo
 
@@ -113,23 +152,35 @@ Watch Demo
 
 <div>
 
-<h2>1M+</h2>
+<h2 id="fanCounter">
 
-<span>Fans</span>
+1000+
 
-</div>
+</h2>
 
-<div>
-
-<h2>50+</h2>
-
-<span>Teams</span>
+<span>Early Fans</span>
 
 </div>
 
 <div>
 
-<h2>10+</h2>
+<h2>
+
+50+
+
+</h2>
+
+<span>Nations</span>
+
+</div>
+
+<div>
+
+<h2>
+
+10+
+
+</h2>
 
 <span>Sports</span>
 
@@ -143,269 +194,616 @@ Watch Demo
 
 <img
 src="assets/hero/hero-banner.png"
-alt="Hero Banner">
+alt="Fanvora Hero">
 
 </div>
+
+</div>
+
+<div class="scroll-indicator">
+
+↓
 
 </div>
 
 </section>
-
-<!-- ================= SPORTS ================= -->
+<!-- ==========================================
+SPORTS
+========================================== -->
 
 <section class="sports" id="sports">
 
-<div class="container">
-
-<h2 class="section-title">
-
-Choose Your Sport
-
-</h2>
-
-<div class="sports-grid">
-
-<div class="sport-card">
-
-<img src="assets/sports/football.png">
-
-<h3>Football</h3>
-
-<p>
-
-Follow clubs.
-
-Earn achievements.
-
-Become a Legend.
-
-</p>
-
-</div>
-
-<div class="sport-card">
-
-<img src="assets/sports/cricket.png">
-
-<h3>Cricket</h3>
-
-<p>
-
-Track matches.
-
-Support players.
-
-Collect Fan XP.
-
-</p>
-
-</div>
-
-<div class="sport-card">
-
-<img src="assets/sports/basketball.png">
-
-<h3>Basketball</h3>
-
-<p>
-
-Join communities.
-
-Unlock premium rewards.
-
-</p>
-
-</div>
-
-<div class="sport-card">
-
-<img src="assets/sports/f1.png">
-
-<h3>Formula 1</h3>
-
-<p>
-
-Race weekends.
-
-Driver achievements.
-
-Exclusive badges.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-<!-- ================= PASSPORT ================= -->
-
-<section class="passport" id="passport">
-
     <div class="container">
-
-        <h2 class="section-title">
-            Your Digital Fan Passport
-        </h2>
-
-        <div class="passport-wrapper">
-
-            <div class="passport-image">
-                <img src="assets/passport/passport.png" alt="Fan Passport">
-            </div>
-
-            <div class="passport-content">
-
-                <h3>One Identity. Every Sport.</h3>
-
-                <p>
-                    Build your Fan Passport, collect achievements,
-                    earn badges and showcase your journey across
-                    Football, Cricket, Basketball and Formula 1.
-                </p>
-
-                <a href="#" class="primary-btn">
-                    Create Passport
-                </a>
-
-            </div>
-
-        </div>
-
+    
+    <span class="section-tag">
+    Choose Your Passion
+    </span>
+    
+    <h2 class="section-title">
+    
+    One Platform.<br>
+    Every Sport.
+    
+    </h2>
+    
+    <p class="section-subtitle">
+    
+    Follow your favourite sport, support your nation,
+    earn achievements and become a Fanvora Legend.
+    
+    </p>
+    
+    <div class="sports-grid">
+    
+    <a href="football.html" class="sport-card">
+    
+    <img src="assets/sports/football.png" alt="Football">
+    
+    <h3>Football</h3>
+    
+    <p>
+    Support your nation, unlock achievements,
+    earn badges and climb the leaderboard.
+    </p>
+    
+    <span>Explore →</span>
+    
+    </a>
+    
+    <a href="cricket.html" class="sport-card">
+    
+    <img src="assets/sports/cricket.png" alt="Cricket">
+    
+    <h3>Cricket</h3>
+    
+    <p>
+    Celebrate every run, every wicket and
+    build your digital fan identity.
+    </p>
+    
+    <span>Explore →</span>
+    
+    </a>
+    
+    <a href="basketball.html" class="sport-card">
+    
+    <img src="assets/sports/basketball.png" alt="Basketball">
+    
+    <h3>Basketball</h3>
+    
+    <p>
+    Support your favourite teams and
+    unlock exclusive rewards.
+    </p>
+    
+    <span>Explore →</span>
+    
+    </a>
+    
+    <a href="f1.html" class="sport-card">
+    
+    <img src="assets/sports/f1.png" alt="Formula 1">
+    
+    <h3>Formula One</h3>
+    
+    <p>
+    Race weekends, legendary drivers and
+    exclusive motorsport achievements.
+    </p>
+    
+    <span>Explore →</span>
+    
+    </a>
+    
     </div>
-
-</section>
-
-<!-- ================= BADGES ================= -->
-
-<section class="badges" id="badges">
-
+    
+    </div>
+    
+    </section>
+    
+    <!-- ==========================================
+    PASSPORT
+    ========================================== -->
+    
+    <section class="passport" id="passport">
+    
+    <div class="container passport-wrapper">
+    
+    <div class="passport-image">
+    
+    <img
+    src="assets/passport/passport.png"
+    alt="Digital Passport">
+    
+    </div>
+    
+    <div class="passport-content">
+    
+    <span class="section-tag">
+    
+    Digital Identity
+    
+    </span>
+    
+    <h2>
+    
+    Your Digital Fan Passport
+    
+    </h2>
+    
+    <p>
+    
+    One Passport.
+    
+    Every Sport.
+    
+    Every Achievement.
+    
+    Build your fan journey,
+    collect badges, unlock XP,
+    support your nation and
+    be recognised across Fanvora.
+    
+    </p>
+    
+    <div class="passport-features">
+    
+    <div>✅ Unique Passport ID</div>
+    
+    <div>✅ QR Verification</div>
+    
+    <div>✅ XP & Levels</div>
+    
+    <div>✅ Digital Badges</div>
+    
+    <div>✅ Lifetime Fan Identity</div>
+    
+    </div>
+    
+    <a href="login.html"
+    class="primary-btn">
+    
+    Create Passport
+    
+    </a>
+    
+    </div>
+    
+    </div>
+    
+    </section>
+    
+    <!-- ==========================================
+    BADGES
+    ========================================== -->
+    
+    <section class="badges"
+    id="badges">
+    
     <div class="container">
-
-        <h2 class="section-title">
-            Earn Exclusive Badges
-        </h2>
-
-        <div class="badge-grid">
-
-            <div class="badge-card">
-                <img src="assets/badges/football-badge.png" alt="Football Badge">
-                <h3>Football Fan</h3>
-            </div>
-
-            <div class="badge-card">
-                <img src="assets/badges/cricket-badge.png" alt="Cricket Badge">
-                <h3>Cricket Fan</h3>
-            </div>
-
-            <div class="badge-card">
-                <img src="assets/badges/basketball-badge.png" alt="Basketball Badge">
-                <h3>Basketball Fan</h3>
-            </div>
-
-            <div class="badge-card">
-                <img src="assets/badges/f1-badge.png" alt="F1 Badge">
-                <h3>Formula 1 Fan</h3>
-            </div>
-
-        </div>
-
+    
+    <span class="section-tag">
+    
+    Achievements
+    
+    </span>
+    
+    <h2 class="section-title">
+    
+    Earn Legendary Badges
+    
+    </h2>
+    
+    <p class="section-subtitle">
+    
+    Every action earns rewards.
+    
+    Every milestone unlocks new badges.
+    
+    </p>
+    
+    <div class="badge-grid">
+    
+        <a href="badges.html" class="badge-card">
+    
+    <img src="assets/badges/football-badge.png">
+    
+    <h3>Football Legend</h3>
+    
+    <p>
+    
+    Support football and unlock
+    exclusive achievements.
+    
+    </p>
+    
+</a>
+    
+    <a href="badges.html" class="badge-card">
+    
+    <img src="assets/badges/cricket-badge.png">
+    
+    <h3>Cricket Master</h3>
+    
+    <p>
+    
+    Celebrate victories and
+    collect unique fan rewards.
+    
+    </p>
+    
+</a>
+    
+    <a href="badges.html" class="badge-card">
+    
+    <img src="assets/badges/basketball-badge.png">
+    
+    <h3>Basketball Elite</h3>
+    
+    <p>
+    
+    Level up through
+    community engagement.
+    
+    </p>
+    
+</a>
+    
+    <a href="badges.html" class="badge-card">
+    
+    <img src="assets/badges/f1-badge.png">
+    
+    <h3>Racing Champion</h3>
+    
+    <p>
+    
+    Unlock Formula One
+    exclusive badges.
+    
+    </p>
+    
+</a>
+    
     </div>
-
-</section>
-
-<!-- ================= COMMUNITY ================= -->
-
-<section class="community">
-
+    
+    </div>
+    
+    </section>
+    
+    <!-- ==========================================
+    COMMUNITY
+    ========================================== -->
+    
+    <section class="community">
+    
     <div class="container community-box">
-
-        <div>
-
-            <h2>Become Part of the Fanvora Community</h2>
-
-            <p>
-                Join millions of sports fans, unlock rewards,
-                climb the leaderboard and become a true legend.
-            </p>
-
-        </div>
-
-        <img src="assets/avatars/fan-avatar.png" alt="Fan Avatar">
-
+    
+    <div class="community-content">
+    
+    <span class="section-tag">
+    
+    Join Fanvora
+    
+    </span>
+    
+    <h2>
+    
+    Become Part of the World's Fastest Growing Sports Fan Community
+    
+    </h2>
+    
+    <p>
+    
+    Connect with sports fans worldwide,
+    earn your place on the leaderboard,
+    unlock achievements and become a true legend.
+    
+    </p>
+    
+    <a href="signup.html"
+    class="primary-btn">
+    
+    Join Fanvora Free
+    
+    </a>
+    
     </div>
+    
+    <div class="community-image">
+    
+    <img
+    src="assets/avatars/fan-avatar.png"
+    alt="Fan Community">
+    
+    </div>
+    
+    </div>
+    
+    </section>
+    <!-- ==========================================
+ABOUT US
+========================================== -->
 
-</section>
+<section class="about" id="about">
 
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
+    <div class="container about-wrapper">
+    
+    <div class="about-left">
+    
+    <span class="section-tag">
+    About Fanvora
+    </span>
+    
+    <h2>
+    
+    More Than A Sports Platform
+    
+    </h2>
+    
+    <p>
+    
+    Fanvora is building a global digital identity
+    for every sports fan.
+    
+    Whether you support India, Brazil,
+    Argentina, England or any other nation,
+    Fanvora helps you build your fan journey,
+    collect achievements and become part of
+    the world's biggest sports community.
+    
+    </p>
+    
+    <p>
+    
+    Our mission is simple —
+    
+    <strong>
+    Where Fans Become Legends.
+    </strong>
+    
+    </p>
+    
+    </div>
+    
+    <div class="about-right">
+    
+    <img
+    src="assets/logo/logo.png"
+    alt="Fanvora">
+    
+    </div>
+    
+    </div>
+    
+    </section>
+    
+    <!-- ==========================================
+    FOUNDER
+    ========================================== -->
+    
+    <section class="founder">
+    
+    <div class="container founder-box">
+    
+    <div class="founder-image">
+    
+    <img
+    src="assets/founder/ajay.png"
+    alt="Ajay Sharma">
+    
+    </div>
+    
+    <div class="founder-content">
+    
+    <span class="section-tag">
+    
+    Founder
+    
+    </span>
+    
+    <h2>
+    
+    Ajay Sharma
+    
+    </h2>
+    
+    <p>
+    
+    Fanvora started with one vision —
+    
+    to unite sports fans across the world
+    through a single digital identity.
+    
+    Every fan deserves recognition,
+    a passport and a community.
+    
+    This is just the beginning.
+    
+    </p>
+    
+    <a href="mailto:contact@fanvora.in"
+    class="primary-btn">
+    
+    Contact Founder
+    
+    </a>
+    
+    </div>
+    
+    </div>
+    
+    </section>
+    
+    <!-- ==========================================
+    FOOTER
+    ========================================== -->
+    
+    <footer>
+    
     <div class="container">
-
-        <img src="assets/logo/logo.png"
-        alt="Fanvora Logo"
-        class="footer-logo">
-
-        <h3>Where Fans Become Legends.</h3>
-
-        <p>
-            Fanvora is the ultimate digital fan platform where sports fans
-            collect achievements, unlock badges and build their digital
-            fan identity.
-        </p>
-
-        <div class="footer-links">
-
-            <a href="#">Home</a>
-
-            <a href="#sports">Sports</a>
-
-            <a href="#passport">Passport</a>
-
-            <a href="#badges">Badges</a>
-
-            <a href="#">Contact</a>
-
-            <a href="#">Privacy Policy</a>
-
-            <a href="#">Terms & Conditions</a>
-
-        </div>
-
-        <div class="social-links">
-
-            <a href="#">Instagram</a>
-
-            <a href="#">X</a>
-
-            <a href="#">LinkedIn</a>
-
-            <a href="#">YouTube</a>
-
-        </div>
-
-        <hr>
-
-        <p class="copyright">
-
-            © 2026 <strong>Fanvora</strong>. All Rights Reserved.
-
-        </p>
-
+    
+    <img
+    src="assets/logo/logo.png"
+    class="footer-logo"
+    alt="Fanvora">
+    
+    <h3>
+    
+    Where Fans Become Legends
+    
+    </h3>
+    
+    <p>
+    
+    The world's first Digital Fan Passport platform
+    for sports lovers.
+    
+    Support.
+    
+    Collect.
+    
+    Compete.
+    
+    Become Legendary.
+    
+    </p>
+    
+    <div class="footer-links">
+    
+    <a href="#hero">Home</a>
+    
+    <a href="#sports">Sports</a>
+    
+    <a href="#passport">Passport</a>
+    
+    <a href="#badges">Badges</a>
+    
+    <a href="#about">About</a>
+    
+    <a href="privacy.html">Privacy</a>
+    
+    <a href="terms.html">Terms</a>
+    
+    <a href="contact.html">Contact</a>
+    
     </div>
-
-</footer>
-<p class="developer">
-
+    
+    <div class="social-links">
+    
+    <a href="https://instagram.com/fanvora"
+    target="_blank">
+    
+    Instagram
+    
+    </a>
+    
+    <a href="https://x.com"
+    target="_blank">
+    
+    X
+    
+    </a>
+    
+    <a href="https://linkedin.com"
+    target="_blank">
+    
+    LinkedIn
+    
+    </a>
+    
+    <a href="https://youtube.com"
+    target="_blank">
+    
+    YouTube
+    
+    </a>
+    
+    </div>
+    
+    <hr>
+    
+    <p class="copyright">
+    
+    © 2026 Fanvora.
+    
+    All Rights Reserved.
+    
+    </p>
+    
+    </div>
+    
+    </footer>
+    
+    <!-- ==========================================
+    DOWNLOAD MODAL
+    ========================================== -->
+    
+    <div id="downloadModal"
+    class="modal">
+    
+    <div class="modal-content">
+    
+    <h2>
+    
+    Fanvora App
+    
+    </h2>
+    
+    <p>
+    
+    Android APK Coming Soon 🚀
+    
+    </p>
+    
+    <button id="closeDownload">
+    
+    Close
+    
+    </button>
+    
+    </div>
+    
+    </div>
+    
+    <!-- ==========================================
+    DEMO MODAL
+    ========================================== -->
+    
+    <div id="demoModal"
+    class="modal">
+    
+    <div class="modal-content">
+    
+    <h2>
+    
+    Fanvora Demo
+    
+    </h2>
+    
+    <p>
+    
+    Demo video will be available soon.
+    
+    </p>
+    
+    <button id="closeDemo">
+    
+    Close
+    
+    </button>
+    
+    </div>
+    
+    </div>
+    
+    <p class="developer">
+    
     Built with ❤️ by Team Fanvora
     
     </p>
-
-<script src="script.js"></script>
-
-</body>
-
-</html>
+    
+    <script src="script.js"></script>
+    
+    </body>
+    
+    </html>
